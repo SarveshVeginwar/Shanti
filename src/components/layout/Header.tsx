@@ -14,7 +14,6 @@ const Header = () => {
     { name: "Pharma", href: "/pharma" },
     { name: "Real Estate", href: "/real-estate" },
     { name: "Technology", href: "/technology" },
-    { name: "Projects", href: "/projects" },
   ];
 
   return (

@@ -147,6 +147,93 @@ const RealEstatePage = () => {
         </div>
       </section>
 
+      {/* Upcoming Projects */}
+      <section className="py-16 px-4">
+        <div className="container mx-auto max-w-6xl">
+          <div className="text-center mb-12">
+            <h2 className="text-4xl font-bold text-foreground mb-4">Upcoming Projects</h2>
+            <p className="text-xl text-muted-foreground">Exciting new developments coming soon</p>
+          </div>
+
+          <div className="max-w-4xl mx-auto">
+            <Card className="overflow-hidden hover:shadow-elegant transition-all duration-300">
+              <div className="bg-gradient-primary text-white p-8">
+                <div className="flex items-center gap-3 mb-4">
+                  <span className="text-3xl">✨</span>
+                  <h3 className="text-3xl font-bold">Awadh Nagari</h3>
+                  <span className="text-3xl">✨</span>
+                </div>
+                <div className="space-y-3 text-lg">
+                  <div className="flex items-center gap-3">
+                    <span className="text-2xl">🏘️</span>
+                    <p>A township where tradition meets modern living</p>
+                  </div>
+                  <div className="flex items-center gap-3">
+                    <span className="text-2xl">🌿</span>
+                    <p>Inspired by culture, rooted in community</p>
+                  </div>
+                  <div className="flex items-center gap-3">
+                    <span className="text-2xl">💎</span>
+                    <p>Located in Gondpipary</p>
+                  </div>
+                </div>
+              </div>
+              <CardContent className="p-8">
+                <div className="grid md:grid-cols-2 gap-8">
+                  <div>
+                    <h4 className="text-2xl font-bold text-foreground mb-4">Project Highlights</h4>
+                    <ul className="space-y-3 text-muted-foreground">
+                      <li className="flex items-start gap-3">
+                        <span className="text-primary text-xl">•</span>
+                        <span>Modern township design with traditional architectural elements</span>
+                      </li>
+                      <li className="flex items-start gap-3">
+                        <span className="text-primary text-xl">•</span>
+                        <span>Community-centric living with cultural spaces</span>
+                      </li>
+                      <li className="flex items-start gap-3">
+                        <span className="text-primary text-xl">•</span>
+                        <span>Green spaces and sustainable development</span>
+                      </li>
+                      <li className="flex items-start gap-3">
+                        <span className="text-primary text-xl">•</span>
+                        <span>Strategic location in Gondpipary</span>
+                      </li>
+                    </ul>
+                  </div>
+                  <div>
+                    <h4 className="text-2xl font-bold text-foreground mb-4">Key Features</h4>
+                    <div className="grid grid-cols-2 gap-4">
+                      <div className="text-center p-4 bg-muted/30 rounded-lg">
+                        <h5 className="font-semibold text-primary">Premium Homes</h5>
+                        <p className="text-sm text-muted-foreground">2-4 BHK Options</p>
+                      </div>
+                      <div className="text-center p-4 bg-muted/30 rounded-lg">
+                        <h5 className="font-semibold text-primary">Amenities</h5>
+                        <p className="text-sm text-muted-foreground">Club & Recreation</p>
+                      </div>
+                      <div className="text-center p-4 bg-muted/30 rounded-lg">
+                        <h5 className="font-semibold text-primary">Security</h5>
+                        <p className="text-sm text-muted-foreground">24/7 Gated Community</p>
+                      </div>
+                      <div className="text-center p-4 bg-muted/30 rounded-lg">
+                        <h5 className="font-semibold text-primary">Launch</h5>
+                        <p className="text-sm text-muted-foreground">Coming Soon</p>
+                      </div>
+                    </div>
+                    <div className="mt-6">
+                      <Button className="w-full" size="lg">
+                        Register Interest
+                      </Button>
+                    </div>
+                  </div>
+                </div>
+              </CardContent>
+            </Card>
+          </div>
+        </div>
+      </section>
+
       {/* Contact Section */}
       <section className="py-16 px-4">
         <div className="container mx-auto max-w-4xl">
