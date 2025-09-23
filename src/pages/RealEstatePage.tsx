@@ -1,4 +1,4 @@
-import { Building, MapPin, Phone, Mail, Users, Target, Award, TrendingUp } from "lucide-react";
+import { Building, MapPin, Phone, Mail, Users, Target, Award, TrendingUp, Home, Leaf, Shield, Calendar, Star } from "lucide-react";
 import { Card, CardContent, CardDescription, CardHeader, CardTitle } from "@/components/ui/card";
 import { Button } from "@/components/ui/button";
 import { Input } from "@/components/ui/input";
@@ -158,22 +158,22 @@ const RealEstatePage = () => {
           <div className="max-w-4xl mx-auto">
             <Card className="overflow-hidden hover:shadow-elegant transition-all duration-300">
               <div className="bg-gradient-primary text-white p-8">
-                <div className="flex items-center gap-3 mb-4">
-                  <span className="text-3xl">✨</span>
-                  <h3 className="text-3xl font-bold">Awadh Nagari</h3>
-                  <span className="text-3xl">✨</span>
+                <div className="flex items-center justify-center gap-4 mb-6">
+                  <Star className="h-8 w-8 text-accent" />
+                  <h3 className="text-4xl font-bold">Awadh Nagari</h3>
+                  <Star className="h-8 w-8 text-accent" />
                 </div>
-                <div className="space-y-3 text-lg">
-                  <div className="flex items-center gap-3">
-                    <span className="text-2xl">🏘️</span>
+                <div className="space-y-4 text-lg">
+                  <div className="flex items-center gap-4">
+                    <Home className="h-6 w-6 text-accent flex-shrink-0" />
                     <p>A township where tradition meets modern living</p>
                   </div>
-                  <div className="flex items-center gap-3">
-                    <span className="text-2xl">🌿</span>
+                  <div className="flex items-center gap-4">
+                    <Leaf className="h-6 w-6 text-accent flex-shrink-0" />
                     <p>Inspired by culture, rooted in community</p>
                   </div>
-                  <div className="flex items-center gap-3">
-                    <span className="text-2xl">💎</span>
+                  <div className="flex items-center gap-4">
+                    <MapPin className="h-6 w-6 text-accent flex-shrink-0" />
                     <p>Located in Gondpipary</p>
                   </div>
                 </div>
@@ -184,19 +184,19 @@ const RealEstatePage = () => {
                     <h4 className="text-2xl font-bold text-foreground mb-4">Project Highlights</h4>
                     <ul className="space-y-3 text-muted-foreground">
                       <li className="flex items-start gap-3">
-                        <span className="text-primary text-xl">•</span>
+                        <Building className="h-5 w-5 text-primary mt-1 flex-shrink-0" />
                         <span>Modern township design with traditional architectural elements</span>
                       </li>
                       <li className="flex items-start gap-3">
-                        <span className="text-primary text-xl">•</span>
+                        <Users className="h-5 w-5 text-primary mt-1 flex-shrink-0" />
                         <span>Community-centric living with cultural spaces</span>
                       </li>
                       <li className="flex items-start gap-3">
-                        <span className="text-primary text-xl">•</span>
+                        <Leaf className="h-5 w-5 text-primary mt-1 flex-shrink-0" />
                         <span>Green spaces and sustainable development</span>
                       </li>
                       <li className="flex items-start gap-3">
-                        <span className="text-primary text-xl">•</span>
+                        <MapPin className="h-5 w-5 text-primary mt-1 flex-shrink-0" />
                         <span>Strategic location in Gondpipary</span>
                       </li>
                     </ul>
@@ -205,18 +205,22 @@ const RealEstatePage = () => {
                     <h4 className="text-2xl font-bold text-foreground mb-4">Key Features</h4>
                     <div className="grid grid-cols-2 gap-4">
                       <div className="text-center p-4 bg-muted/30 rounded-lg">
+                        <Home className="h-6 w-6 text-primary mx-auto mb-2" />
                         <h5 className="font-semibold text-primary">Premium Homes</h5>
                         <p className="text-sm text-muted-foreground">2-4 BHK Options</p>
                       </div>
                       <div className="text-center p-4 bg-muted/30 rounded-lg">
+                        <Users className="h-6 w-6 text-primary mx-auto mb-2" />
                         <h5 className="font-semibold text-primary">Amenities</h5>
                         <p className="text-sm text-muted-foreground">Club & Recreation</p>
                       </div>
                       <div className="text-center p-4 bg-muted/30 rounded-lg">
+                        <Shield className="h-6 w-6 text-primary mx-auto mb-2" />
                         <h5 className="font-semibold text-primary">Security</h5>
                         <p className="text-sm text-muted-foreground">24/7 Gated Community</p>
                       </div>
                       <div className="text-center p-4 bg-muted/30 rounded-lg">
+                        <Calendar className="h-6 w-6 text-primary mx-auto mb-2" />
                         <h5 className="font-semibold text-primary">Launch</h5>
                         <p className="text-sm text-muted-foreground">Coming Soon</p>
                       </div>
