@@ -159,9 +159,9 @@ const RealEstatePage = () => {
             <Card className="overflow-hidden hover:shadow-elegant transition-all duration-300">
               <div className="bg-gradient-primary text-white p-8">
                 <div className="flex items-center justify-center gap-4 mb-6">
-                  <Star className="h-8 w-8 text-accent" />
-                  <h3 className="text-4xl font-bold">Awadh Nagari</h3>
-                  <Star className="h-8 w-8 text-accent" />
+                  <Star className="h-8 w-8 text-white" />
+                  <h3 className="text-4xl font-bold text-white drop-shadow-lg">Awadh Nagari</h3>
+                  <Star className="h-8 w-8 text-white" />
                 </div>
                 <div className="space-y-4 text-lg">
                   <div className="flex items-center gap-4">
