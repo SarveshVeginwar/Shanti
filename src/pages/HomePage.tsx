@@ -47,6 +47,7 @@ const HomePage = () => {
     <div className="min-h-screen">
       {/* Hero Section */}
       <section className="relative min-h-screen flex items-center justify-center bg-gradient-subtle overflow-hidden">
+        <div className="absolute inset-0 bg-[image:var(--gradient-hero-bg)]"></div>
         <div className="absolute inset-0 bg-grid-pattern opacity-5"></div>
         <div className="container mx-auto px-4 sm:px-6 lg:px-8 text-center relative z-10">
           <div className="max-w-4xl mx-auto space-y-8">
