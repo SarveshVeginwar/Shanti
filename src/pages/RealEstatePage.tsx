@@ -163,18 +163,18 @@ const RealEstatePage = () => {
                   <h3 className="text-4xl font-bold text-primary drop-shadow-lg">Awadh Nagari</h3>
                   <Star className="h-8 w-8 text-secondary" />
                 </div>
-                <div className="space-y-4 text-lg text-primary-foreground">
+                <div className="space-y-4 text-lg">
                   <div className="flex items-center gap-4">
                     <Home className="h-6 w-6 text-secondary flex-shrink-0" />
-                    <p>A township where tradition meets modern living</p>
+                    <p className="text-black">A township where tradition meets modern living</p>
                   </div>
                   <div className="flex items-center gap-4">
                     <Leaf className="h-6 w-6 text-secondary flex-shrink-0" />
-                    <p>Inspired by culture, rooted in community</p>
+                    <p className="text-black">Inspired by culture, rooted in community</p>
                   </div>
                   <div className="flex items-center gap-4">
                     <MapPin className="h-6 w-6 text-secondary flex-shrink-0" />
-                    <p>Located in Gondpipary</p>
+                    <p className="text-black">Located in Gondpipary</p>
                   </div>
                 </div>
               </div>
