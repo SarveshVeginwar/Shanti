@@ -157,23 +157,23 @@ const RealEstatePage = () => {
 
           <div className="max-w-4xl mx-auto">
             <Card className="overflow-hidden hover:shadow-elegant transition-all duration-300">
-              <div className="bg-gradient-primary text-white p-8">
+              <div className="bg-gradient-primary p-8">
                 <div className="flex items-center justify-center gap-4 mb-6">
-                  <Star className="h-8 w-8 text-white" />
-                  <h3 className="text-4xl font-bold text-white drop-shadow-lg">Awadh Nagari</h3>
-                  <Star className="h-8 w-8 text-white" />
+                  <Star className="h-8 w-8 text-secondary" />
+                  <h3 className="text-4xl font-bold text-primary drop-shadow-lg">Awadh Nagari</h3>
+                  <Star className="h-8 w-8 text-secondary" />
                 </div>
-                <div className="space-y-4 text-lg">
+                <div className="space-y-4 text-lg text-primary-foreground">
                   <div className="flex items-center gap-4">
-                    <Home className="h-6 w-6 text-accent flex-shrink-0" />
+                    <Home className="h-6 w-6 text-secondary flex-shrink-0" />
                     <p>A township where tradition meets modern living</p>
                   </div>
                   <div className="flex items-center gap-4">
-                    <Leaf className="h-6 w-6 text-accent flex-shrink-0" />
+                    <Leaf className="h-6 w-6 text-secondary flex-shrink-0" />
                     <p>Inspired by culture, rooted in community</p>
                   </div>
                   <div className="flex items-center gap-4">
-                    <MapPin className="h-6 w-6 text-accent flex-shrink-0" />
+                    <MapPin className="h-6 w-6 text-secondary flex-shrink-0" />
                     <p>Located in Gondpipary</p>
                   </div>
                 </div>
