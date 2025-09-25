@@ -239,84 +239,166 @@ const RealEstatePage = () => {
       </section>
 
       {/* Contact Section */}
-      <section className="py-16 px-4">
-        <div className="container mx-auto max-w-4xl">
-          <div className="text-center mb-12">
-            <h2 className="text-4xl font-bold text-foreground mb-4">Contact Shanti Life Spaces</h2>
-            <p className="text-xl text-muted-foreground">
-              Ready to find your perfect space? Get in touch with our real estate experts.
+      <section className="py-24 px-4 bg-gradient-to-br from-background via-background to-background/50 relative overflow-hidden">
+        {/* Background decoration */}
+        <div className="absolute inset-0 bg-gradient-to-r from-primary/5 to-secondary/5"></div>
+        <div className="absolute top-20 left-10 w-32 h-32 bg-primary/10 rounded-full blur-3xl"></div>
+        <div className="absolute bottom-20 right-10 w-40 h-40 bg-secondary/10 rounded-full blur-3xl"></div>
+        
+        <div className="container mx-auto max-w-7xl relative z-10">
+          <div className="text-center mb-16">
+            <div className="inline-flex items-center gap-2 bg-primary/10 text-primary px-4 py-2 rounded-full text-sm font-medium mb-6">
+              <Mail className="h-4 w-4" />
+              Get in Touch
+            </div>
+            <h2 className="text-5xl font-bold text-foreground mb-6 bg-gradient-to-r from-foreground to-foreground/70 bg-clip-text text-transparent">
+              Contact Shanti Life Spaces
+            </h2>
+            <p className="text-xl text-muted-foreground max-w-2xl mx-auto leading-relaxed">
+              Ready to find your perfect space? Connect with our real estate experts and discover premium properties that match your vision.
             </p>
           </div>
 
-          <div className="grid md:grid-cols-2 gap-12">
-            <div>
-              <h3 className="text-2xl font-bold text-foreground mb-6">Get in Touch</h3>
-              <div className="space-y-4">
-                <div className="flex items-start gap-3">
-                  <MapPin className="h-6 w-6 text-primary mt-1 flex-shrink-0" />
-                  <div>
-                    <h4 className="font-semibold">Office Address</h4>
-                    <p className="text-muted-foreground">
-                      Shanti Life Spaces<br />
-                      Real Estate Division, Shanti Group<br />
-                      Business District, Mumbai - 400001
-                    </p>
-                  </div>
+          <div className="grid lg:grid-cols-3 gap-8 mb-16">
+            {/* Contact Cards */}
+            <Card className="card-premium group hover:scale-105 transition-all duration-300">
+              <CardContent className="p-8 text-center">
+                <div className="w-16 h-16 bg-gradient-to-br from-primary to-primary-glow rounded-2xl flex items-center justify-center mx-auto mb-6 group-hover:scale-110 transition-transform duration-300">
+                  <MapPin className="h-8 w-8 text-white" />
                 </div>
-                <div className="flex items-center gap-3">
-                  <Phone className="h-6 w-6 text-primary flex-shrink-0" />
-                  <div>
-                    <h4 className="font-semibold">Phone</h4>
-                    <p className="text-muted-foreground">+91 22 1234 5678</p>
-                  </div>
-                </div>
-                <div className="flex items-center gap-3">
-                  <Mail className="h-6 w-6 text-primary flex-shrink-0" />
-                  <div>
-                    <h4 className="font-semibold">Email</h4>
-                    <p className="text-muted-foreground">info@shantilifespaces.com</p>
-                  </div>
-                </div>
-              </div>
-            </div>
+                <h3 className="text-xl font-bold text-foreground mb-3">Visit Our Office</h3>
+                <p className="text-muted-foreground leading-relaxed">
+                  Shanti Life Spaces<br />
+                  Real Estate Division, Shanti Group<br />
+                  Business District, Mumbai - 400001
+                </p>
+              </CardContent>
+            </Card>
 
-            <Card>
-              <CardHeader>
-                <CardTitle>Send us a Message</CardTitle>
-                <CardDescription>We'll get back to you within 24 hours</CardDescription>
+            <Card className="card-premium group hover:scale-105 transition-all duration-300">
+              <CardContent className="p-8 text-center">
+                <div className="w-16 h-16 bg-gradient-to-br from-primary to-primary-glow rounded-2xl flex items-center justify-center mx-auto mb-6 group-hover:scale-110 transition-transform duration-300">
+                  <Phone className="h-8 w-8 text-white" />
+                </div>
+                <h3 className="text-xl font-bold text-foreground mb-3">Call Us Today</h3>
+                <p className="text-muted-foreground mb-2">Sales & Inquiries</p>
+                <p className="text-lg font-semibold text-primary">+91 22 1234 5678</p>
+              </CardContent>
+            </Card>
+
+            <Card className="card-premium group hover:scale-105 transition-all duration-300">
+              <CardContent className="p-8 text-center">
+                <div className="w-16 h-16 bg-gradient-to-br from-primary to-primary-glow rounded-2xl flex items-center justify-center mx-auto mb-6 group-hover:scale-110 transition-transform duration-300">
+                  <Mail className="h-8 w-8 text-white" />
+                </div>
+                <h3 className="text-xl font-bold text-foreground mb-3">Email Us</h3>
+                <p className="text-muted-foreground mb-2">General Inquiries</p>
+                <p className="text-lg font-semibold text-primary">shantigroup.w@gmail.com</p>
+              </CardContent>
+            </Card>
+          </div>
+
+          {/* Contact Form */}
+          <div className="max-w-4xl mx-auto">
+            <Card className="card-premium">
+              <CardHeader className="text-center pb-8">
+                <CardTitle className="text-3xl font-bold text-foreground mb-3">Send us a Message</CardTitle>
+                <CardDescription className="text-lg text-muted-foreground">
+                  Fill out the form below and our team will get back to you within 24 hours
+                </CardDescription>
               </CardHeader>
-              <CardContent>
-                <form className="space-y-4">
-                  <div className="grid grid-cols-2 gap-4">
-                    <div className="space-y-2">
-                      <Label htmlFor="firstName">First Name</Label>
-                      <Input id="firstName" placeholder="John" />
+              <CardContent className="p-8">
+                <form className="space-y-6">
+                  <div className="grid md:grid-cols-2 gap-6">
+                    <div className="space-y-3">
+                      <Label htmlFor="firstName" className="text-sm font-semibold text-foreground">First Name *</Label>
+                      <Input 
+                        id="firstName" 
+                        placeholder="Enter your first name" 
+                        className="h-12 bg-background/50 border-border/50 focus:border-primary focus:ring-primary/20" 
+                      />
                     </div>
-                    <div className="space-y-2">
-                      <Label htmlFor="lastName">Last Name</Label>
-                      <Input id="lastName" placeholder="Doe" />
+                    <div className="space-y-3">
+                      <Label htmlFor="lastName" className="text-sm font-semibold text-foreground">Last Name *</Label>
+                      <Input 
+                        id="lastName" 
+                        placeholder="Enter your last name" 
+                        className="h-12 bg-background/50 border-border/50 focus:border-primary focus:ring-primary/20" 
+                      />
                     </div>
                   </div>
-                  <div className="space-y-2">
-                    <Label htmlFor="email">Email</Label>
-                    <Input id="email" type="email" placeholder="john@example.com" />
+                  
+                  <div className="grid md:grid-cols-2 gap-6">
+                    <div className="space-y-3">
+                      <Label htmlFor="email" className="text-sm font-semibold text-foreground">Email Address *</Label>
+                      <Input 
+                        id="email" 
+                        type="email" 
+                        placeholder="your.email@example.com" 
+                        className="h-12 bg-background/50 border-border/50 focus:border-primary focus:ring-primary/20" 
+                      />
+                    </div>
+                    <div className="space-y-3">
+                      <Label htmlFor="phone" className="text-sm font-semibold text-foreground">Phone Number *</Label>
+                      <Input 
+                        id="phone" 
+                        placeholder="+91 98765 43210" 
+                        className="h-12 bg-background/50 border-border/50 focus:border-primary focus:ring-primary/20" 
+                      />
+                    </div>
                   </div>
-                  <div className="space-y-2">
-                    <Label htmlFor="phone">Phone</Label>
-                    <Input id="phone" placeholder="+91 98765 43210" />
+
+                  <div className="space-y-3">
+                    <Label htmlFor="interest" className="text-sm font-semibold text-foreground">Property Interest</Label>
+                    <Input 
+                      id="interest" 
+                      placeholder="Residential, Commercial, Investment Property..." 
+                      className="h-12 bg-background/50 border-border/50 focus:border-primary focus:ring-primary/20" 
+                    />
                   </div>
-                  <div className="space-y-2">
-                    <Label htmlFor="interest">Property Interest</Label>
-                    <Input id="interest" placeholder="Residential/Commercial/Investment" />
+
+                  <div className="space-y-3">
+                    <Label htmlFor="message" className="text-sm font-semibold text-foreground">Your Message *</Label>
+                    <Textarea 
+                      id="message" 
+                      placeholder="Tell us about your requirements, budget, preferred location, or any specific questions you have..." 
+                      rows={5} 
+                      className="bg-background/50 border-border/50 focus:border-primary focus:ring-primary/20 resize-none" 
+                    />
                   </div>
-                  <div className="space-y-2">
-                    <Label htmlFor="message">Message</Label>
-                    <Textarea id="message" placeholder="Tell us about your requirements..." rows={4} />
+
+                  <div className="flex flex-col sm:flex-row gap-4 pt-4">
+                    <Button className="btn-hero flex-1 h-12 text-lg font-semibold">
+                      <Mail className="h-5 w-5 mr-2" />
+                      Send Message
+                    </Button>
+                    <Button variant="outline" className="btn-secondary-hero flex-1 h-12 text-lg font-semibold">
+                      <Phone className="h-5 w-5 mr-2" />
+                      Schedule Call
+                    </Button>
                   </div>
-                  <Button className="w-full">Send Message</Button>
                 </form>
               </CardContent>
             </Card>
+          </div>
+
+          {/* Additional Info */}
+          <div className="text-center mt-12 p-8 bg-gradient-to-r from-primary/5 to-secondary/5 rounded-3xl border border-border/50">
+            <h3 className="text-2xl font-bold text-foreground mb-4">Why Choose Shanti Life Spaces?</h3>
+            <div className="grid md:grid-cols-3 gap-6 text-center">
+              <div>
+                <div className="text-3xl font-bold text-primary mb-2">500+</div>
+                <p className="text-muted-foreground">Happy Families</p>
+              </div>
+              <div>
+                <div className="text-3xl font-bold text-primary mb-2">25+</div>
+                <p className="text-muted-foreground">Projects Completed</p>
+              </div>
+              <div>
+                <div className="text-3xl font-bold text-primary mb-2">24/7</div>
+                <p className="text-muted-foreground">Customer Support</p>
+              </div>
+            </div>
           </div>
         </div>
       </section>
