@@ -4,14 +4,17 @@ import { Button } from "@/components/ui/button";
 import { Input } from "@/components/ui/input";
 import { Textarea } from "@/components/ui/textarea";
 import { Label } from "@/components/ui/label";
-import shantiLifespacesLogo from "@/assets/shanti-lifespaces-logo.png";
+import shantiLifespacesLogo from "@/assets/shanti-lifespaces-new-logo.png";
 const RealEstatePage = () => {
   return <div className="min-h-screen bg-gradient-subtle">
       {/* Hero Section */}
       <section className="relative py-4 px-4 text-center bg-gradient-primary text-white">
         <div className="container mx-auto max-w-4xl">
-          
-          
+          <img 
+            src={shantiLifespacesLogo} 
+            alt="Shanti Lifespaces Logo" 
+            className="h-32 w-auto mx-auto"
+          />
         </div>
       </section>
 
