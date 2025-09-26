@@ -5,10 +5,8 @@ import { Input } from "@/components/ui/input";
 import { Textarea } from "@/components/ui/textarea";
 import { Label } from "@/components/ui/label";
 import shantiLifespacesLogo from "@/assets/shanti-lifespaces-logo.png";
-
 const RealEstatePage = () => {
-  return (
-    <div className="min-h-screen bg-gradient-subtle">
+  return <div className="min-h-screen bg-gradient-subtle">
       {/* Hero Section */}
       <section className="relative py-4 px-4 text-center bg-gradient-primary text-white">
         <div className="container mx-auto max-w-4xl">
@@ -19,10 +17,7 @@ const RealEstatePage = () => {
               <p className="text-xl mt-2 text-white/90">Shanti Life Spaces</p>
             </div>
           </div>
-          <p className="text-xl text-white/90 max-w-3xl mx-auto leading-relaxed">
-            Creating premium living spaces and commercial developments that blend modern innovation 
-            with sustainable design, under the trusted Shanti Group umbrella.
-          </p>
+          
         </div>
       </section>
 
@@ -30,13 +25,7 @@ const RealEstatePage = () => {
       <section className="py-16 px-4">
         <div className="container mx-auto max-w-6xl">
           <div className="text-center mb-12">
-            <div className="flex justify-center mb-8">
-              <img 
-                src={shantiLifespacesLogo} 
-                alt="Shanti Lifespaces Logo" 
-                className="h-32 w-auto object-contain"
-              />
-            </div>
+            
             <h2 className="text-4xl font-bold text-foreground mb-4">About Shanti Life Spaces</h2>
             <p className="text-xl text-muted-foreground max-w-3xl mx-auto">
               A premier real estate subsidiary of Shanti Group, specializing in residential and commercial developments 
@@ -320,59 +309,33 @@ const RealEstatePage = () => {
                   <div className="grid md:grid-cols-2 gap-6">
                     <div className="space-y-3">
                       <Label htmlFor="firstName" className="text-sm font-semibold text-foreground">First Name *</Label>
-                      <Input 
-                        id="firstName" 
-                        placeholder="Enter your first name" 
-                        className="h-12 bg-background/50 border-border/50 focus:border-primary focus:ring-primary/20" 
-                      />
+                      <Input id="firstName" placeholder="Enter your first name" className="h-12 bg-background/50 border-border/50 focus:border-primary focus:ring-primary/20" />
                     </div>
                     <div className="space-y-3">
                       <Label htmlFor="lastName" className="text-sm font-semibold text-foreground">Last Name *</Label>
-                      <Input 
-                        id="lastName" 
-                        placeholder="Enter your last name" 
-                        className="h-12 bg-background/50 border-border/50 focus:border-primary focus:ring-primary/20" 
-                      />
+                      <Input id="lastName" placeholder="Enter your last name" className="h-12 bg-background/50 border-border/50 focus:border-primary focus:ring-primary/20" />
                     </div>
                   </div>
                   
                   <div className="grid md:grid-cols-2 gap-6">
                     <div className="space-y-3">
                       <Label htmlFor="email" className="text-sm font-semibold text-foreground">Email Address *</Label>
-                      <Input 
-                        id="email" 
-                        type="email" 
-                        placeholder="your.email@example.com" 
-                        className="h-12 bg-background/50 border-border/50 focus:border-primary focus:ring-primary/20" 
-                      />
+                      <Input id="email" type="email" placeholder="your.email@example.com" className="h-12 bg-background/50 border-border/50 focus:border-primary focus:ring-primary/20" />
                     </div>
                     <div className="space-y-3">
                       <Label htmlFor="phone" className="text-sm font-semibold text-foreground">Phone Number *</Label>
-                      <Input 
-                        id="phone" 
-                        placeholder="+91 98765 43210" 
-                        className="h-12 bg-background/50 border-border/50 focus:border-primary focus:ring-primary/20" 
-                      />
+                      <Input id="phone" placeholder="+91 98765 43210" className="h-12 bg-background/50 border-border/50 focus:border-primary focus:ring-primary/20" />
                     </div>
                   </div>
 
                   <div className="space-y-3">
                     <Label htmlFor="interest" className="text-sm font-semibold text-foreground">Property Interest</Label>
-                    <Input 
-                      id="interest" 
-                      placeholder="Residential, Commercial, Investment Property..." 
-                      className="h-12 bg-background/50 border-border/50 focus:border-primary focus:ring-primary/20" 
-                    />
+                    <Input id="interest" placeholder="Residential, Commercial, Investment Property..." className="h-12 bg-background/50 border-border/50 focus:border-primary focus:ring-primary/20" />
                   </div>
 
                   <div className="space-y-3">
                     <Label htmlFor="message" className="text-sm font-semibold text-foreground">Your Message *</Label>
-                    <Textarea 
-                      id="message" 
-                      placeholder="Tell us about your requirements, budget, preferred location, or any specific questions you have..." 
-                      rows={5} 
-                      className="bg-background/50 border-border/50 focus:border-primary focus:ring-primary/20 resize-none" 
-                    />
+                    <Textarea id="message" placeholder="Tell us about your requirements, budget, preferred location, or any specific questions you have..." rows={5} className="bg-background/50 border-border/50 focus:border-primary focus:ring-primary/20 resize-none" />
                   </div>
 
                   <div className="flex flex-col sm:flex-row gap-4 pt-4">
@@ -410,8 +373,6 @@ const RealEstatePage = () => {
           </div>
         </div>
       </section>
-    </div>
-  );
+    </div>;
 };
-
 export default RealEstatePage;
