@@ -13,7 +13,7 @@ const RealEstatePage = () => {
           <img 
             src={shantiLifespacesLogo} 
             alt="Shanti Lifespaces Logo" 
-            className="h-32 w-auto mx-auto"
+            className="h-8 w-8 mx-auto"
           />
         </div>
       </section>
