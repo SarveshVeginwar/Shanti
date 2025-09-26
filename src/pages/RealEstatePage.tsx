@@ -10,7 +10,7 @@ const RealEstatePage = () => {
   return (
     <div className="min-h-screen bg-gradient-subtle">
       {/* Hero Section */}
-      <section className="relative py-20 px-4 text-center bg-gradient-primary text-white">
+      <section className="relative py-12 px-4 text-center bg-gradient-primary text-white">
         <div className="container mx-auto max-w-4xl">
           <div className="flex items-center justify-center gap-3 mb-6">
             <Building className="h-12 w-12" />
