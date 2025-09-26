@@ -4,6 +4,7 @@ import { Button } from "@/components/ui/button";
 import { Input } from "@/components/ui/input";
 import { Textarea } from "@/components/ui/textarea";
 import { Label } from "@/components/ui/label";
+import shantiLifespacesLogo from "@/assets/shanti-lifespaces-logo.png";
 
 const RealEstatePage = () => {
   return (
@@ -29,6 +30,13 @@ const RealEstatePage = () => {
       <section className="py-16 px-4">
         <div className="container mx-auto max-w-6xl">
           <div className="text-center mb-12">
+            <div className="flex justify-center mb-8">
+              <img 
+                src={shantiLifespacesLogo} 
+                alt="Shanti Lifespaces Logo" 
+                className="h-24 w-auto object-contain"
+              />
+            </div>
             <h2 className="text-4xl font-bold text-foreground mb-4">About Shanti Life Spaces</h2>
             <p className="text-xl text-muted-foreground max-w-3xl mx-auto">
               A premier real estate subsidiary of Shanti Group, specializing in residential and commercial developments 
