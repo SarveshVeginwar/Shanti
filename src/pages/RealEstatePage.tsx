@@ -4,7 +4,7 @@ import { Button } from "@/components/ui/button";
 import { Input } from "@/components/ui/input";
 import { Textarea } from "@/components/ui/textarea";
 import { Label } from "@/components/ui/label";
-import shantiLifespacesLogo from "@/assets/shanti-group-logo.png";
+import shantiLifespacesLogo from "@/assets/shanti-group-logo-new.png";
 const RealEstatePage = () => {
   return <div className="min-h-screen bg-gradient-subtle">
       {/* Hero Section */}
