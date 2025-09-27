@@ -51,11 +51,11 @@ const HomePage = () => {
         <div className="absolute inset-0 bg-grid-pattern opacity-5"></div>
         <div className="container mx-auto px-4 sm:px-6 lg:px-8 text-center relative z-10">
           <div className="max-w-4xl mx-auto space-y-8">
-            <div className="flex justify-center mb-8">
+            <div className="flex justify-center mb-12">
               <img 
                 src={shantiLogo} 
                 alt="Shanti Group Logo" 
-                className="h-24 w-auto object-contain animate-fade-in"
+                className="h-48 w-auto object-contain animate-fade-in"
               />
             </div>
             <h1 className="text-5xl md:text-7xl font-bold text-gradient leading-tight">
