@@ -250,22 +250,26 @@ const AboutPage = () => {
                 and corporate governance.
               </p>
               
-              <div className="grid grid-cols-1 md:grid-cols-3 lg:grid-cols-5 gap-6">
+              <div className="space-y-4">
                 {boardMembers.map((member, index) => (
                   <Card key={index} className="card-premium hover-lift">
-                    <CardContent className="p-6 text-center">
-                      <div className="w-20 h-20 mx-auto mb-4 bg-primary/10 rounded-full flex items-center justify-center">
-                        <User size={32} className="text-primary" />
+                    <CardContent className="p-6">
+                      <div className="flex items-center space-x-4">
+                        <div className="w-16 h-16 bg-primary/10 rounded-full flex items-center justify-center flex-shrink-0">
+                          <User size={24} className="text-primary" />
+                        </div>
+                        <div className="flex-1">
+                          <h4 className="text-lg font-semibold text-foreground mb-1">
+                            {member.name}
+                          </h4>
+                          <p className="text-sm font-medium text-primary mb-1">
+                            {member.position}
+                          </p>
+                          <p className="text-sm text-muted-foreground">
+                            {member.experience}
+                          </p>
+                        </div>
                       </div>
-                      <h4 className="text-lg font-semibold text-foreground mb-2">
-                        {member.name}
-                      </h4>
-                      <p className="text-sm font-medium text-primary mb-2">
-                        {member.position}
-                      </p>
-                      <p className="text-xs text-muted-foreground">
-                        {member.experience}
-                      </p>
                     </CardContent>
                   </Card>
                 ))}
