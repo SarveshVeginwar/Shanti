@@ -26,7 +26,7 @@ const Header = () => {
             />
           </Link>
 
-          {/* Desktop Navigation */}
+          {/* Desktop Navigation and Contact Button */}
           <div className="hidden lg:flex items-center space-x-8">
             {navigation.map((item) => (
               <Link
@@ -37,10 +37,6 @@ const Header = () => {
                 {item.name}
               </Link>
             ))}
-          </div>
-
-          {/* Contact Button */}
-          <div className="hidden lg:block">
             <Link to="/contact">
               <Button variant="outline" className="btn-secondary-hero">
                 Contact Us
