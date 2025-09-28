@@ -41,9 +41,11 @@ const Header = () => {
 
           {/* Contact Button */}
           <div className="hidden lg:block">
-            <Button variant="outline" className="btn-secondary-hero">
-              Contact Us
-            </Button>
+            <Link to="/contact">
+              <Button variant="outline" className="btn-secondary-hero">
+                Contact Us
+              </Button>
+            </Link>
           </div>
 
           {/* Mobile menu button */}
@@ -73,9 +75,11 @@ const Header = () => {
                   {item.name}
                 </Link>
               ))}
-              <Button variant="outline" className="btn-secondary-hero w-full mt-4">
-                Contact Us
-              </Button>
+              <Link to="/contact">
+                <Button variant="outline" className="btn-secondary-hero w-full mt-4">
+                  Contact Us
+                </Button>
+              </Link>
             </div>
           </div>
         )}
