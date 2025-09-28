@@ -1,4 +1,4 @@
-import { Calendar, Users, Award, TrendingUp } from "lucide-react";
+import { Calendar, Users, Award, TrendingUp, User } from "lucide-react";
 import { Card, CardContent } from "@/components/ui/card";
 
 const AboutPage = () => {
@@ -65,6 +65,34 @@ const AboutPage = () => {
       icon: Calendar,
       title: "Sustainability",
       description: "We are committed to sustainable practices that ensure a better future for generations to come."
+    }
+  ];
+
+  const boardMembers = [
+    {
+      name: "Dr. Rajesh Sharma",
+      position: "Chairman & Managing Director",
+      experience: "35+ years in Agriculture & Business"
+    },
+    {
+      name: "Mrs. Priya Agarwal",
+      position: "Independent Director",
+      experience: "20+ years in Corporate Governance"
+    },
+    {
+      name: "Mr. Anil Kumar",
+      position: "Executive Director",
+      experience: "25+ years in Pharmaceuticals"
+    },
+    {
+      name: "Dr. Sunita Mehta",
+      position: "Independent Director",
+      experience: "30+ years in Technology & Innovation"
+    },
+    {
+      name: "Mr. Vikash Gupta",
+      position: "Director - Finance",
+      experience: "28+ years in Financial Management"
     }
   ];
 
@@ -213,14 +241,35 @@ const AboutPage = () => {
               operational excellence. Our management team brings decades of industry experience 
               and a shared commitment to sustainable growth.
             </p>
-            <div className="bg-card rounded-2xl p-8 shadow-card">
+            <div className="bg-card rounded-2xl p-8 shadow-card mb-12">
               <h3 className="text-2xl font-semibold text-foreground mb-4">Board of Directors</h3>
-              <p className="text-muted-foreground leading-relaxed">
+              <p className="text-muted-foreground leading-relaxed mb-8">
                 Our board consists of industry veterans and independent directors who provide 
                 strategic guidance and ensure strong governance practices across all our business units. 
                 Their collective expertise spans agriculture, pharmaceuticals, real estate, technology, 
                 and corporate governance.
               </p>
+              
+              <div className="grid grid-cols-1 md:grid-cols-3 lg:grid-cols-5 gap-6">
+                {boardMembers.map((member, index) => (
+                  <Card key={index} className="card-premium hover-lift">
+                    <CardContent className="p-6 text-center">
+                      <div className="w-20 h-20 mx-auto mb-4 bg-primary/10 rounded-full flex items-center justify-center">
+                        <User size={32} className="text-primary" />
+                      </div>
+                      <h4 className="text-lg font-semibold text-foreground mb-2">
+                        {member.name}
+                      </h4>
+                      <p className="text-sm font-medium text-primary mb-2">
+                        {member.position}
+                      </p>
+                      <p className="text-xs text-muted-foreground">
+                        {member.experience}
+                      </p>
+                    </CardContent>
+                  </Card>
+                ))}
+              </div>
             </div>
           </div>
         </div>
