@@ -33,12 +33,19 @@ const HomePage = () => {
       description: "Cutting-edge technological solutions for modern business challenges.",
       href: "/technology",
       color: "text-purple-600"
+    },
+    {
+      icon: Building2,
+      name: "Manufacturing",
+      description: "Advanced manufacturing solutions and industrial excellence for diverse sectors.",
+      href: "/manufacturing",
+      color: "text-red-600"
     }
   ];
 
   const stats = [
     { number: "60+", label: "Years of Excellence" },
-    { number: "4", label: "Major Sectors" },
+    { number: "5", label: "Major Sectors" },
     { number: "50+", label: "Successful Projects" },
     { number: "1000+", label: "Employees" }
   ];
@@ -160,30 +167,34 @@ const HomePage = () => {
               Our <span className="text-gradient">Sectors</span>
             </h2>
             <p className="text-xl text-muted-foreground max-w-3xl mx-auto">
-              Diversified excellence across four major industries, each contributing to 
+              Diversified excellence across five major industries, each contributing to 
               sustainable growth and innovation.
             </p>
           </div>
 
-          <div className="grid md:grid-cols-2 lg:grid-cols-4 gap-8">
+          <div className="space-y-6">
             {sectors.map((sector, index) => (
               <Card key={index} className="card-premium hover-lift group">
-                <CardContent className="p-8 text-center">
-                  <div className="w-16 h-16 mx-auto mb-6 bg-primary/10 rounded-2xl flex items-center justify-center group-hover:bg-primary/20 transition-colors">
-                    <sector.icon size={32} className="text-primary" />
+                <CardContent className="p-8">
+                  <div className="flex items-center gap-8">
+                    <div className="w-20 h-20 bg-primary/10 rounded-2xl flex items-center justify-center group-hover:bg-primary/20 transition-colors flex-shrink-0">
+                      <sector.icon size={40} className="text-primary" />
+                    </div>
+                    <div className="flex-1">
+                      <h3 className="text-2xl font-semibold text-foreground mb-3">
+                        {sector.name}
+                      </h3>
+                      <p className="text-muted-foreground mb-4 leading-relaxed">
+                        {sector.description}
+                      </p>
+                      <Link to={sector.href}>
+                        <Button variant="ghost" className="text-primary hover:text-primary-foreground hover:bg-primary group">
+                          Explore Sector
+                          <ArrowRight className="ml-2 group-hover:translate-x-1 transition-transform" size={16} />
+                        </Button>
+                      </Link>
+                    </div>
                   </div>
-                  <h3 className="text-xl font-semibold text-foreground mb-4">
-                    {sector.name}
-                  </h3>
-                  <p className="text-muted-foreground mb-6 leading-relaxed">
-                    {sector.description}
-                  </p>
-                  <Link to={sector.href}>
-                    <Button variant="ghost" className="text-primary hover:text-primary-foreground hover:bg-primary group">
-                      Explore Sector
-                      <ArrowRight className="ml-2 group-hover:translate-x-1 transition-transform" size={16} />
-                    </Button>
-                  </Link>
                 </CardContent>
               </Card>
             ))}
