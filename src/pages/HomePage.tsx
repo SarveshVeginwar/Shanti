@@ -1,4 +1,4 @@
-import { ArrowRight, Leaf, Building2, Pill, Cpu, Star, Award, Users, Heart, Globe, Calendar, Trophy, Target } from "lucide-react";
+import { ArrowRight, Leaf, Building2, Pill, Cpu, Cog, Star, Award, Users, Heart, Globe, Calendar, Trophy, Target } from "lucide-react";
 import { Link } from "react-router-dom";
 import { Button } from "@/components/ui/button";
 import { Card, CardContent } from "@/components/ui/card";
@@ -35,7 +35,7 @@ const HomePage = () => {
       color: "text-purple-600"
     },
     {
-      icon: Building2,
+      icon: Cog,
       name: "Manufacturing",
       description: "Advanced manufacturing solutions and industrial excellence for diverse sectors.",
       href: "/manufacturing",
