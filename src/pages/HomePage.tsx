@@ -1,4 +1,4 @@
-import { ArrowRight, Leaf, Building2, Pill, Cpu, Star, Award, Users, Heart, Globe, Calendar, Trophy, Target, Cog } from "lucide-react";
+import { ArrowRight, Leaf, Building2, Pill, Cpu, Star, Award, Users, Heart, Globe, Calendar, Trophy, Target } from "lucide-react";
 import { Link } from "react-router-dom";
 import { Button } from "@/components/ui/button";
 import { Card, CardContent } from "@/components/ui/card";
@@ -33,19 +33,12 @@ const HomePage = () => {
       description: "Cutting-edge technological solutions for modern business challenges.",
       href: "/technology",
       color: "text-purple-600"
-    },
-    {
-      icon: Cog,
-      name: "Manufacturing",
-      description: "Advanced manufacturing solutions and industrial excellence for diverse sectors.",
-      href: "/manufacturing",
-      color: "text-gray-600"
     }
   ];
 
   const stats = [
     { number: "60+", label: "Years of Excellence" },
-    { number: "5", label: "Major Sectors" },
+    { number: "4", label: "Major Sectors" },
     { number: "50+", label: "Successful Projects" },
     { number: "1000+", label: "Employees" }
   ];
@@ -71,9 +64,8 @@ const HomePage = () => {
             <p className="text-xl md:text-2xl text-muted-foreground max-w-3xl mx-auto leading-relaxed">
               Building a sustainable future across <span className="text-primary font-semibold">agriculture</span>, 
               <span className="text-primary font-semibold"> pharmaceuticals</span>, 
-              <span className="text-primary font-semibold"> real estate</span>, 
-              <span className="text-primary font-semibold"> technology</span>, and 
-              <span className="text-primary font-semibold"> manufacturing</span> since 1960.
+              <span className="text-primary font-semibold"> real estate</span>, and 
+              <span className="text-primary font-semibold"> technology</span> since 1960.
             </p>
             <div className="flex flex-col sm:flex-row gap-4 justify-center pt-8">
               <Button className="btn-hero">
@@ -168,12 +160,12 @@ const HomePage = () => {
               Our <span className="text-gradient">Sectors</span>
             </h2>
             <p className="text-xl text-muted-foreground max-w-3xl mx-auto">
-              Diversified excellence across five major industries, each contributing to 
+              Diversified excellence across four major industries, each contributing to 
               sustainable growth and innovation.
             </p>
           </div>
 
-          <div className="grid md:grid-cols-2 lg:grid-cols-5 gap-8">
+          <div className="grid md:grid-cols-2 lg:grid-cols-4 gap-8">
             {sectors.map((sector, index) => (
               <Card key={index} className="card-premium hover-lift group">
                 <CardContent className="p-8 text-center">
