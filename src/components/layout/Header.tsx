@@ -22,7 +22,7 @@ const Header = () => {
             <img 
               src={shantiLogo} 
               alt="Shanti Group Logo" 
-              className="h-16 w-auto object-contain"
+              className="h-24 w-auto object-contain"
             />
           </Link>
 
