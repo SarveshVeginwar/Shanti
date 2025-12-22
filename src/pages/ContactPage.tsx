@@ -6,6 +6,7 @@ import { Label } from "@/components/ui/label";
 import { Card, CardContent, CardDescription, CardHeader, CardTitle } from "@/components/ui/card";
 import { Mail, Phone, MapPin, Clock, Send } from "lucide-react";
 import { useToast } from "@/hooks/use-toast";
+import { ScrollReveal } from "@/hooks/use-scroll-reveal";
 
 const ContactPage = () => {
   const [formData, setFormData] = useState({
@@ -74,14 +75,16 @@ const ContactPage = () => {
       <section className="relative pt-20 pb-16 overflow-hidden">
         <div className="absolute inset-0 bg-gradient-radial from-primary/5 via-transparent to-transparent"></div>
         <div className="container mx-auto px-4 relative z-10">
-          <div className="text-center max-w-3xl mx-auto">
-            <h1 className="text-4xl md:text-5xl lg:text-6xl font-bold text-gradient mb-6">
-              Get in Touch
-            </h1>
-            <p className="text-xl text-muted-foreground mb-8">
-              We'd love to hear from you. Send us a message and we'll respond as soon as possible.
-            </p>
-          </div>
+          <ScrollReveal>
+            <div className="text-center max-w-3xl mx-auto">
+              <h1 className="text-4xl md:text-5xl lg:text-6xl font-bold text-gradient mb-6">
+                Get in Touch
+              </h1>
+              <p className="text-xl text-muted-foreground mb-8">
+                We'd love to hear from you. Send us a message and we'll respond as soon as possible.
+              </p>
+            </div>
+          </ScrollReveal>
         </div>
       </section>
 
@@ -89,8 +92,9 @@ const ContactPage = () => {
       <section className="section-padding">
         <div className="container mx-auto px-4">
           <div className="grid lg:grid-cols-2 gap-12">
-            {/* Contact Information */}
-            <div className="space-y-8">
+            <ScrollReveal>
+              {/* Contact Information */}
+              <div className="space-y-8">
               <div>
                 <h2 className="text-3xl font-bold mb-4">Contact Information</h2>
                 <p className="text-muted-foreground text-lg">
@@ -128,10 +132,10 @@ const ContactPage = () => {
                   </div>
                 </CardContent>
               </Card>
-            </div>
+              </div>
+            </ScrollReveal>
 
-            {/* Contact Form */}
-            <div>
+            <ScrollReveal delay={200}>
               <Card className="card-premium">
                 <CardHeader>
                   <CardTitle className="text-2xl">Send us a Message</CardTitle>
@@ -212,7 +216,7 @@ const ContactPage = () => {
                   </form>
                 </CardContent>
               </Card>
-            </div>
+            </ScrollReveal>
           </div>
         </div>
       </section>
