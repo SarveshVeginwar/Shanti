@@ -142,7 +142,7 @@ const RealEstatePage = () => {
       </section>
 
       {/* Upcoming Projects */}
-      <section className="py-20 px-4 bg-gradient-to-br from-primary/5 via-background to-secondary/5">
+      <section id="awadh-nagari" className="py-20 px-4 bg-gradient-to-br from-primary/5 via-background to-secondary/5 scroll-mt-20">
         <div className="container mx-auto max-w-6xl">
           <div className="text-center mb-16">
             <div className="inline-flex items-center gap-2 bg-secondary/20 text-secondary-dark px-4 py-2 rounded-full text-sm font-semibold mb-6 animate-pulse">
@@ -184,6 +184,24 @@ const RealEstatePage = () => {
                       <p className="text-white font-medium">Gondpipari, Maharashtra</p>
                     </div>
                   </div>
+                </div>
+              </div>
+              
+              {/* Project Overview Video */}
+              <div className="p-8 bg-muted/30">
+                <h4 className="text-2xl font-bold text-foreground mb-4 text-center flex items-center justify-center gap-3">
+                  <Target className="h-6 w-6 text-primary" />
+                  Project Overview
+                </h4>
+                <div className="aspect-video rounded-xl overflow-hidden shadow-lg border border-border">
+                  <video 
+                    className="w-full h-full object-cover"
+                    controls
+                    poster="/videos/awadh-nagari-overview.mp4"
+                  >
+                    <source src="/videos/awadh-nagari-overview.mp4" type="video/mp4" />
+                    Your browser does not support the video tag.
+                  </video>
                 </div>
               </div>
               

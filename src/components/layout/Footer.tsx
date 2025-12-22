@@ -13,7 +13,7 @@ const Footer = () => {
   const quickLinks = [
     { name: "About Us", href: "/about" },
     { name: "Our History", href: "/about#history" },
-    { name: "Upcoming Projects", href: "/projects" },
+    { name: "Upcoming Projects", href: "/real-estate#awadh-nagari" },
     { name: "Careers", href: "/careers" },
   ];
 
