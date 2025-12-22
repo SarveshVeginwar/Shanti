@@ -62,7 +62,7 @@ const HomePage = () => {
               <img 
                 src={shantiLogo} 
                 alt="Shanti Group Logo" 
-                className="h-48 w-auto object-contain animate-fade-in"
+                className="h-48 w-auto object-contain animate-float"
               />
             </div>
             <h1 className="text-5xl md:text-7xl font-bold text-gradient leading-tight">
