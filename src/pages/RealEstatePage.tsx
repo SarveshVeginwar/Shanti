@@ -10,11 +10,7 @@ const RealEstatePage = () => {
       {/* Hero Section */}
       <section className="relative py-4 px-4 text-center bg-gradient-primary text-white">
         <div className="container mx-auto max-w-4xl">
-          <img 
-            src={shantiLifespacesLogo} 
-            alt="Shanti Lifespaces Logo" 
-            className="h-64 w-64 mx-auto"
-          />
+          <img src={shantiLifespacesLogo} alt="Shanti Lifespaces Logo" className="h-64 w-64 mx-auto" />
         </div>
       </section>
 
@@ -167,7 +163,9 @@ const RealEstatePage = () => {
                       <h3 className="text-5xl md:text-6xl font-bold text-white drop-shadow-lg tracking-tight">Awadh Nagari</h3>
                       <p className="text-secondary font-semibold text-lg mt-2">A Township of Dreams</p>
                     </div>
-                    <Star className="h-10 w-10 text-secondary animate-float" style={{ animationDelay: '0.5s' }} />
+                    <Star className="h-10 w-10 text-secondary animate-float" style={{
+                    animationDelay: '0.5s'
+                  }} />
                   </div>
                   
                   <div className="grid md:grid-cols-3 gap-6 text-center">
@@ -194,11 +192,7 @@ const RealEstatePage = () => {
                   Project Overview
                 </h4>
                 <div className="aspect-video rounded-xl overflow-hidden shadow-lg border border-border">
-                  <video 
-                    className="w-full h-full object-cover"
-                    controls
-                    poster="/videos/awadh-nagari-overview.mp4"
-                  >
+                  <video className="w-full h-full object-cover" controls poster="/videos/awadh-nagari-overview.mp4">
                     <source src="/videos/awadh-nagari-overview.mp4" type="video/mp4" />
                     Your browser does not support the video tag.
                   </video>
@@ -271,7 +265,7 @@ const RealEstatePage = () => {
                         </div>
                         <Calendar className="h-8 w-8 text-primary mx-auto mb-3" />
                         <h5 className="font-bold text-primary text-lg">Launch</h5>
-                        <p className="text-sm text-muted-foreground mt-1">Coming Soon 2025</p>
+                        <p className="text-sm text-muted-foreground mt-1">Coming Soon 2026</p>
                       </div>
                     </div>
                     
