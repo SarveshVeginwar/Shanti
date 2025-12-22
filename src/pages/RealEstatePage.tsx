@@ -142,87 +142,128 @@ const RealEstatePage = () => {
       </section>
 
       {/* Upcoming Projects */}
-      <section className="py-16 px-4">
+      <section className="py-20 px-4 bg-gradient-to-br from-primary/5 via-background to-secondary/5">
         <div className="container mx-auto max-w-6xl">
-          <div className="text-center mb-12">
-            <h2 className="text-4xl font-bold text-foreground mb-4">Upcoming Projects</h2>
-            <p className="text-xl text-muted-foreground">Exciting new developments coming soon</p>
+          <div className="text-center mb-16">
+            <div className="inline-flex items-center gap-2 bg-secondary/20 text-secondary-dark px-4 py-2 rounded-full text-sm font-semibold mb-6 animate-pulse">
+              <Star className="h-4 w-4" />
+              Coming Soon to Gondpipari
+            </div>
+            <h2 className="text-5xl font-bold text-foreground mb-6">Upcoming Projects</h2>
+            <p className="text-xl text-muted-foreground max-w-2xl mx-auto">
+              Be the first to experience our most ambitious development yet — a perfect blend of tradition and modernity
+            </p>
           </div>
 
-          <div className="max-w-4xl mx-auto">
-            <Card className="overflow-hidden hover:shadow-elegant transition-all duration-300">
-              <div className="bg-gradient-primary p-8">
-                <div className="flex items-center justify-center gap-4 mb-6">
-                  <Star className="h-8 w-8 text-secondary" />
-                  <h3 className="text-4xl font-bold text-primary drop-shadow-lg">Awadh Nagari</h3>
-                  <Star className="h-8 w-8 text-secondary" />
-                </div>
-                <div className="space-y-4 text-lg">
-                  <div className="flex items-center gap-4">
-                    <Home className="h-6 w-6 text-secondary flex-shrink-0" />
-                    <p className="text-black">A township where tradition meets modern living</p>
+          <div className="max-w-5xl mx-auto">
+            <Card className="overflow-hidden shadow-2xl border-2 border-primary/20">
+              {/* Hero Banner */}
+              <div className="bg-gradient-to-r from-primary via-primary-dark to-primary p-10 relative overflow-hidden">
+                <div className="absolute inset-0 bg-primary/10 opacity-30"></div>
+                <div className="relative z-10">
+                  <div className="flex items-center justify-center gap-4 mb-8">
+                    <Star className="h-10 w-10 text-secondary animate-float" />
+                    <div className="text-center">
+                      <h3 className="text-5xl md:text-6xl font-bold text-white drop-shadow-lg tracking-tight">Awadh Nagari</h3>
+                      <p className="text-secondary font-semibold text-lg mt-2">A Township of Dreams</p>
+                    </div>
+                    <Star className="h-10 w-10 text-secondary animate-float" style={{ animationDelay: '0.5s' }} />
                   </div>
-                  <div className="flex items-center gap-4">
-                    <Leaf className="h-6 w-6 text-secondary flex-shrink-0" />
-                    <p className="text-black">Inspired by culture, rooted in community</p>
-                  </div>
-                  <div className="flex items-center gap-4">
-                    <MapPin className="h-6 w-6 text-secondary flex-shrink-0" />
-                    <p className="text-black">Located in Gondpipary</p>
+                  
+                  <div className="grid md:grid-cols-3 gap-6 text-center">
+                    <div className="bg-white/10 backdrop-blur-sm rounded-xl p-4">
+                      <Home className="h-8 w-8 text-secondary mx-auto mb-2" />
+                      <p className="text-white font-medium">Tradition Meets Modernity</p>
+                    </div>
+                    <div className="bg-white/10 backdrop-blur-sm rounded-xl p-4">
+                      <Leaf className="h-8 w-8 text-secondary mx-auto mb-2" />
+                      <p className="text-white font-medium">Culture & Community</p>
+                    </div>
+                    <div className="bg-white/10 backdrop-blur-sm rounded-xl p-4">
+                      <MapPin className="h-8 w-8 text-secondary mx-auto mb-2" />
+                      <p className="text-white font-medium">Gondpipari, Maharashtra</p>
+                    </div>
                   </div>
                 </div>
               </div>
-              <CardContent className="p-8">
-                <div className="grid md:grid-cols-2 gap-8">
+              
+              <CardContent className="p-10">
+                <div className="grid md:grid-cols-2 gap-12">
                   <div>
-                    <h4 className="text-2xl font-bold text-foreground mb-4">Project Highlights</h4>
-                    <ul className="space-y-3 text-muted-foreground">
-                      <li className="flex items-start gap-3">
-                        <Building className="h-5 w-5 text-primary mt-1 flex-shrink-0" />
-                        <span>Modern township design with traditional architectural elements</span>
+                    <h4 className="text-3xl font-bold text-foreground mb-6 flex items-center gap-3">
+                      <Target className="h-8 w-8 text-primary" />
+                      Project Highlights
+                    </h4>
+                    <ul className="space-y-4 text-muted-foreground">
+                      <li className="flex items-start gap-4 p-3 bg-muted/20 rounded-lg">
+                        <Building className="h-6 w-6 text-primary mt-0.5 flex-shrink-0" />
+                        <div>
+                          <span className="font-semibold text-foreground">Modern Township Design</span>
+                          <p className="text-sm mt-1">Traditional architectural elements blended with contemporary living spaces</p>
+                        </div>
                       </li>
-                      <li className="flex items-start gap-3">
-                        <Users className="h-5 w-5 text-primary mt-1 flex-shrink-0" />
-                        <span>Community-centric living with cultural spaces</span>
+                      <li className="flex items-start gap-4 p-3 bg-muted/20 rounded-lg">
+                        <Users className="h-6 w-6 text-primary mt-0.5 flex-shrink-0" />
+                        <div>
+                          <span className="font-semibold text-foreground">Community-Centric Living</span>
+                          <p className="text-sm mt-1">Dedicated cultural spaces, community halls, and gathering areas</p>
+                        </div>
                       </li>
-                      <li className="flex items-start gap-3">
-                        <Leaf className="h-5 w-5 text-primary mt-1 flex-shrink-0" />
-                        <span>Green spaces and sustainable development</span>
+                      <li className="flex items-start gap-4 p-3 bg-muted/20 rounded-lg">
+                        <Leaf className="h-6 w-6 text-primary mt-0.5 flex-shrink-0" />
+                        <div>
+                          <span className="font-semibold text-foreground">Green & Sustainable</span>
+                          <p className="text-sm mt-1">Eco-friendly construction with ample green spaces and parks</p>
+                        </div>
                       </li>
-                      <li className="flex items-start gap-3">
-                        <MapPin className="h-5 w-5 text-primary mt-1 flex-shrink-0" />
-                        <span>Strategic location in Gondpipary</span>
+                      <li className="flex items-start gap-4 p-3 bg-muted/20 rounded-lg">
+                        <MapPin className="h-6 w-6 text-primary mt-0.5 flex-shrink-0" />
+                        <div>
+                          <span className="font-semibold text-foreground">Prime Location</span>
+                          <p className="text-sm mt-1">Strategic location in Gondpipari with excellent connectivity</p>
+                        </div>
                       </li>
                     </ul>
                   </div>
+                  
                   <div>
-                    <h4 className="text-2xl font-bold text-foreground mb-4">Key Features</h4>
-                    <div className="grid grid-cols-2 gap-4">
-                      <div className="text-center p-4 bg-muted/30 rounded-lg">
-                        <Home className="h-6 w-6 text-primary mx-auto mb-2" />
-                        <h5 className="font-semibold text-primary">Premium Homes</h5>
-                        <p className="text-sm text-muted-foreground">2-4 BHK Options</p>
+                    <h4 className="text-3xl font-bold text-foreground mb-6 flex items-center gap-3">
+                      <Award className="h-8 w-8 text-primary" />
+                      Key Features
+                    </h4>
+                    <div className="grid grid-cols-2 gap-4 mb-8">
+                      <div className="text-center p-5 bg-gradient-to-br from-primary/10 to-primary/5 rounded-xl border border-primary/20">
+                        <Home className="h-8 w-8 text-primary mx-auto mb-3" />
+                        <h5 className="font-bold text-primary text-lg">Premium Homes</h5>
+                        <p className="text-sm text-muted-foreground mt-1">2, 3 & 4 BHK Options</p>
                       </div>
-                      <div className="text-center p-4 bg-muted/30 rounded-lg">
-                        <Users className="h-6 w-6 text-primary mx-auto mb-2" />
-                        <h5 className="font-semibold text-primary">Amenities</h5>
-                        <p className="text-sm text-muted-foreground">Club & Recreation</p>
+                      <div className="text-center p-5 bg-gradient-to-br from-secondary/10 to-secondary/5 rounded-xl border border-secondary/20">
+                        <Users className="h-8 w-8 text-primary mx-auto mb-3" />
+                        <h5 className="font-bold text-primary text-lg">World-Class Amenities</h5>
+                        <p className="text-sm text-muted-foreground mt-1">Club, Gym & Recreation</p>
                       </div>
-                      <div className="text-center p-4 bg-muted/30 rounded-lg">
-                        <Shield className="h-6 w-6 text-primary mx-auto mb-2" />
-                        <h5 className="font-semibold text-primary">Security</h5>
-                        <p className="text-sm text-muted-foreground">24/7 Gated Community</p>
+                      <div className="text-center p-5 bg-gradient-to-br from-green-500/10 to-green-500/5 rounded-xl border border-green-500/20">
+                        <Shield className="h-8 w-8 text-primary mx-auto mb-3" />
+                        <h5 className="font-bold text-primary text-lg">24/7 Security</h5>
+                        <p className="text-sm text-muted-foreground mt-1">Gated Community</p>
                       </div>
-                      <div className="text-center p-4 bg-muted/30 rounded-lg">
-                        <Calendar className="h-6 w-6 text-primary mx-auto mb-2" />
-                        <h5 className="font-semibold text-primary">Launch</h5>
-                        <p className="text-sm text-muted-foreground">Coming Soon</p>
+                      <div className="text-center p-5 bg-gradient-to-br from-orange-500/10 to-orange-500/5 rounded-xl border border-orange-500/20 relative overflow-hidden">
+                        <div className="absolute top-0 right-0 bg-secondary text-secondary-foreground text-xs font-bold px-2 py-1 rounded-bl-lg">
+                          NEW
+                        </div>
+                        <Calendar className="h-8 w-8 text-primary mx-auto mb-3" />
+                        <h5 className="font-bold text-primary text-lg">Launch</h5>
+                        <p className="text-sm text-muted-foreground mt-1">Coming Soon 2025</p>
                       </div>
                     </div>
-                    <div className="mt-6">
-                      <Button className="w-full" size="lg">
-                        Register Interest
+                    
+                    <div className="space-y-4">
+                      <Button className="w-full h-14 text-lg font-semibold" size="lg">
+                        Register Your Interest
                       </Button>
+                      <p className="text-center text-sm text-muted-foreground">
+                        Be among the first to know about exclusive pre-launch offers
+                      </p>
                     </div>
                   </div>
                 </div>
