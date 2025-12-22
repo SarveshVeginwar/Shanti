@@ -1,5 +1,6 @@
 import { Calendar, Users, Award, TrendingUp, User } from "lucide-react";
 import { Card, CardContent } from "@/components/ui/card";
+import { ScrollReveal } from "@/hooks/use-scroll-reveal";
 
 const AboutPage = () => {
   const milestones = [
@@ -101,22 +102,25 @@ const AboutPage = () => {
       {/* Hero Section */}
       <section className="section-padding bg-gradient-subtle">
         <div className="container mx-auto px-4 sm:px-6 lg:px-8">
-          <div className="max-w-4xl mx-auto text-center">
-            <h1 className="text-5xl md:text-6xl font-bold text-foreground mb-6">
-              Our <span className="text-gradient">Story</span>
-            </h1>
-            <p className="text-xl md:text-2xl text-muted-foreground leading-relaxed">
-              Six decades of innovation, growth, and commitment to building a sustainable future 
-              across multiple industries.
-            </p>
-          </div>
+          <ScrollReveal>
+            <div className="max-w-4xl mx-auto text-center">
+              <h1 className="text-5xl md:text-6xl font-bold text-foreground mb-6">
+                Our <span className="text-gradient">Story</span>
+              </h1>
+              <p className="text-xl md:text-2xl text-muted-foreground leading-relaxed">
+                Six decades of innovation, growth, and commitment to building a sustainable future 
+                across multiple industries.
+              </p>
+            </div>
+          </ScrollReveal>
         </div>
       </section>
 
       {/* Company Overview */}
       <section className="section-padding">
         <div className="container mx-auto px-4 sm:px-6 lg:px-8">
-          <div className="max-w-6xl mx-auto">
+          <ScrollReveal>
+            <div className="max-w-6xl mx-auto">
             <div className="grid md:grid-cols-2 gap-12 items-center">
               <div className="space-y-6">
                 <h2 className="text-4xl font-bold text-foreground">
@@ -160,24 +164,28 @@ const AboutPage = () => {
                 </div>
               </div>
             </div>
-          </div>
+            </div>
+          </ScrollReveal>
         </div>
       </section>
 
       {/* Values Section */}
       <section className="section-padding bg-muted/30">
         <div className="container mx-auto px-4 sm:px-6 lg:px-8">
-          <div className="text-center mb-16">
-            <h2 className="text-4xl md:text-5xl font-bold text-foreground mb-6">
-              Our <span className="text-gradient">Values</span>
-            </h2>
-            <p className="text-xl text-muted-foreground max-w-3xl mx-auto">
-              The principles that guide our decisions and shape our culture across all sectors and operations.
-            </p>
-          </div>
+          <ScrollReveal>
+            <div className="text-center mb-16">
+              <h2 className="text-4xl md:text-5xl font-bold text-foreground mb-6">
+                Our <span className="text-gradient">Values</span>
+              </h2>
+              <p className="text-xl text-muted-foreground max-w-3xl mx-auto">
+                The principles that guide our decisions and shape our culture across all sectors and operations.
+              </p>
+            </div>
+          </ScrollReveal>
 
           <div className="grid md:grid-cols-2 lg:grid-cols-4 gap-8">
             {values.map((value, index) => (
+              <ScrollReveal key={index} delay={index * 100}>
               <Card key={index} className="card-premium hover-lift">
                 <CardContent className="p-8 text-center">
                   <div className="w-16 h-16 mx-auto mb-6 bg-primary/10 rounded-2xl flex items-center justify-center">
@@ -191,6 +199,7 @@ const AboutPage = () => {
                   </p>
                 </CardContent>
               </Card>
+              </ScrollReveal>
             ))}
           </div>
         </div>

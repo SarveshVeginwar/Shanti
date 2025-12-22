@@ -2,6 +2,7 @@ import { Link } from "react-router-dom";
 import { Card, CardContent, CardDescription, CardHeader, CardTitle } from "@/components/ui/card";
 import { Button } from "@/components/ui/button";
 import { Building2, Leaf, Pill, Home, Cpu, Factory } from "lucide-react";
+import { ScrollReveal } from "@/hooks/use-scroll-reveal";
 
 const BusinessesPage = () => {
   const businesses = [
@@ -47,13 +48,15 @@ const BusinessesPage = () => {
       {/* Hero Section */}
       <section className="py-20 bg-gradient-to-r from-primary/10 to-primary/5">
         <div className="container mx-auto px-4 sm:px-6 lg:px-8 text-center">
-          <h1 className="text-4xl md:text-6xl font-bold text-gradient mb-6">
-            Our Businesses
-          </h1>
-          <p className="text-xl text-muted-foreground max-w-3xl mx-auto">
-            Explore our diverse portfolio of business sectors where we create value 
-            and drive innovation across multiple industries.
-          </p>
+          <ScrollReveal>
+            <h1 className="text-4xl md:text-6xl font-bold text-gradient mb-6">
+              Our Businesses
+            </h1>
+            <p className="text-xl text-muted-foreground max-w-3xl mx-auto">
+              Explore our diverse portfolio of business sectors where we create value 
+              and drive innovation across multiple industries.
+            </p>
+          </ScrollReveal>
         </div>
       </section>
 
@@ -62,7 +65,8 @@ const BusinessesPage = () => {
         <div className="container mx-auto px-4 sm:px-6 lg:px-8">
           <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
             {businesses.map((business, index) => (
-              <Card key={index} className="group hover:shadow-lg transition-all duration-300 hover:-translate-y-1">
+              <ScrollReveal key={index} delay={index * 100}>
+                <Card className="group hover:shadow-lg transition-all duration-300 hover:-translate-y-1 h-full">
                 <CardHeader className="text-center pb-4">
                   <div className={`mx-auto mb-4 ${business.color}`}>
                     {business.icon}
@@ -80,6 +84,7 @@ const BusinessesPage = () => {
                   </Link>
                 </CardContent>
               </Card>
+              </ScrollReveal>
             ))}
           </div>
         </div>

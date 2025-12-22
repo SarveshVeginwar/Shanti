@@ -4,6 +4,7 @@ import { Button } from "@/components/ui/button";
 import { Input } from "@/components/ui/input";
 import { Textarea } from "@/components/ui/textarea";
 import { Label } from "@/components/ui/label";
+import { ScrollReveal } from "@/hooks/use-scroll-reveal";
 import shantiLifespacesLogo from "@/assets/shanti-group-logo-new.png";
 const RealEstatePage = () => {
   return <div className="min-h-screen bg-gradient-subtle">
@@ -17,14 +18,16 @@ const RealEstatePage = () => {
       {/* About Shanti Life Spaces */}
       <section className="py-16 px-4">
         <div className="container mx-auto max-w-6xl">
-          <div className="text-center mb-12">
-            
-            <h2 className="text-4xl font-bold text-foreground mb-4">About Shanti Life Spaces</h2>
-            <p className="text-xl text-muted-foreground max-w-3xl mx-auto">
-              A premier real estate subsidiary of Shanti Group, specializing in residential and commercial developments 
-              that redefine modern living and business spaces.
-            </p>
-          </div>
+          <ScrollReveal>
+            <div className="text-center mb-12">
+              
+              <h2 className="text-4xl font-bold text-foreground mb-4">About Shanti Life Spaces</h2>
+              <p className="text-xl text-muted-foreground max-w-3xl mx-auto">
+                A premier real estate subsidiary of Shanti Group, specializing in residential and commercial developments 
+                that redefine modern living and business spaces.
+              </p>
+            </div>
+          </ScrollReveal>
 
           <div className="grid md:grid-cols-2 gap-12 items-center mb-16">
             <div>
@@ -80,14 +83,17 @@ const RealEstatePage = () => {
       {/* Services */}
       <section className="py-16 px-4 bg-muted/30">
         <div className="container mx-auto max-w-6xl">
-          <div className="text-center mb-12">
-            <h2 className="text-4xl font-bold text-foreground mb-4">Our Services</h2>
-            <p className="text-xl text-muted-foreground">Comprehensive real estate solutions for every need</p>
-          </div>
+          <ScrollReveal>
+            <div className="text-center mb-12">
+              <h2 className="text-4xl font-bold text-foreground mb-4">Our Services</h2>
+              <p className="text-xl text-muted-foreground">Comprehensive real estate solutions for every need</p>
+            </div>
+          </ScrollReveal>
 
           <div className="grid md:grid-cols-3 gap-8">
-            <Card className="hover:shadow-elegant transition-all duration-300">
-              <CardHeader className="text-center">
+            <ScrollReveal delay={0}>
+              <Card className="hover:shadow-elegant transition-all duration-300 h-full">
+                <CardHeader className="text-center">
                 <Building className="h-12 w-12 text-primary mx-auto mb-4" />
                 <CardTitle>Residential Projects</CardTitle>
                 <CardDescription>Premium apartments, villas, and gated communities</CardDescription>
@@ -99,10 +105,12 @@ const RealEstatePage = () => {
                   <li>• Gated communities with security</li>
                   <li>• Smart home integration</li>
                 </ul>
-              </CardContent>
-            </Card>
+                </CardContent>
+              </Card>
+            </ScrollReveal>
 
-            <Card className="hover:shadow-elegant transition-all duration-300">
+            <ScrollReveal delay={100}>
+              <Card className="hover:shadow-elegant transition-all duration-300 h-full">
               <CardHeader className="text-center">
                 <MapPin className="h-12 w-12 text-primary mx-auto mb-4" />
                 <CardTitle>Commercial Spaces</CardTitle>
@@ -115,10 +123,12 @@ const RealEstatePage = () => {
                   <li>• Business parks and IT complexes</li>
                   <li>• Co-working spaces</li>
                 </ul>
-              </CardContent>
-            </Card>
+                </CardContent>
+              </Card>
+            </ScrollReveal>
 
-            <Card className="hover:shadow-elegant transition-all duration-300">
+            <ScrollReveal delay={200}>
+              <Card className="hover:shadow-elegant transition-all duration-300 h-full">
               <CardHeader className="text-center">
                 <Users className="h-12 w-12 text-primary mx-auto mb-4" />
                 <CardTitle>Property Management</CardTitle>
@@ -131,8 +141,9 @@ const RealEstatePage = () => {
                   <li>• Financial management and reporting</li>
                   <li>• Legal compliance and documentation</li>
                 </ul>
-              </CardContent>
-            </Card>
+                </CardContent>
+              </Card>
+            </ScrollReveal>
           </div>
         </div>
       </section>
@@ -140,19 +151,22 @@ const RealEstatePage = () => {
       {/* Upcoming Projects */}
       <section id="awadh-nagari" className="py-20 px-4 bg-gradient-to-br from-primary/5 via-background to-secondary/5 scroll-mt-20">
         <div className="container mx-auto max-w-6xl">
-          <div className="text-center mb-16">
-            <div className="inline-flex items-center gap-2 bg-secondary/20 text-secondary-dark px-4 py-2 rounded-full text-sm font-semibold mb-6 animate-pulse">
-              <Star className="h-4 w-4" />
-              Coming Soon to Gondpipari
+          <ScrollReveal>
+            <div className="text-center mb-16">
+              <div className="inline-flex items-center gap-2 bg-secondary/20 text-secondary-dark px-4 py-2 rounded-full text-sm font-semibold mb-6 animate-pulse">
+                <Star className="h-4 w-4" />
+                Coming Soon to Gondpipari
+              </div>
+              <h2 className="text-5xl font-bold text-foreground mb-6">Upcoming Projects</h2>
+              <p className="text-xl text-muted-foreground max-w-2xl mx-auto">
+                Be the first to experience our most ambitious development yet — a perfect blend of tradition and modernity
+              </p>
             </div>
-            <h2 className="text-5xl font-bold text-foreground mb-6">Upcoming Projects</h2>
-            <p className="text-xl text-muted-foreground max-w-2xl mx-auto">
-              Be the first to experience our most ambitious development yet — a perfect blend of tradition and modernity
-            </p>
-          </div>
+          </ScrollReveal>
 
-          <div className="max-w-5xl mx-auto">
-            <Card className="overflow-hidden shadow-2xl border-2 border-primary/20">
+          <ScrollReveal>
+            <div className="max-w-5xl mx-auto">
+              <Card className="overflow-hidden shadow-2xl border-2 border-primary/20">
               {/* Hero Banner */}
               <div className="bg-gradient-to-r from-primary via-primary-dark to-primary p-10 relative overflow-hidden">
                 <div className="absolute inset-0 bg-primary/10 opacity-30"></div>
@@ -281,7 +295,8 @@ const RealEstatePage = () => {
                 </div>
               </CardContent>
             </Card>
-          </div>
+            </div>
+          </ScrollReveal>
         </div>
       </section>
 

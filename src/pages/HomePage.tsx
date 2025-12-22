@@ -2,6 +2,7 @@ import { ArrowRight, Leaf, Building2, Pill, Cpu, Cog, Star, Award, Users, Heart,
 import { Link } from "react-router-dom";
 import { Button } from "@/components/ui/button";
 import { Card, CardContent } from "@/components/ui/card";
+import { ScrollReveal } from "@/hooks/use-scroll-reveal";
 import shantiLogo from "@/assets/shanti-group-logo-new.png";
 
 const HomePage = () => {
@@ -90,18 +91,20 @@ const HomePage = () => {
       {/* Stats Section */}
       <section className="section-padding bg-primary/5">
         <div className="container mx-auto px-4 sm:px-6 lg:px-8">
-          <div className="grid grid-cols-2 md:grid-cols-4 gap-8">
-            {stats.map((stat, index) => (
-              <div key={index} className="text-center">
-                <div className="text-4xl md:text-5xl font-bold text-gradient mb-2">
-                  {stat.number}
+          <ScrollReveal>
+            <div className="grid grid-cols-2 md:grid-cols-4 gap-8">
+              {stats.map((stat, index) => (
+                <div key={index} className="text-center">
+                  <div className="text-4xl md:text-5xl font-bold text-gradient mb-2">
+                    {stat.number}
+                  </div>
+                  <div className="text-muted-foreground font-medium">
+                    {stat.label}
+                  </div>
                 </div>
-                <div className="text-muted-foreground font-medium">
-                  {stat.label}
-                </div>
-              </div>
-            ))}
-          </div>
+              ))}
+            </div>
+          </ScrollReveal>
         </div>
       </section>
 
@@ -109,15 +112,17 @@ const HomePage = () => {
       <section className="section-padding">
         <div className="container mx-auto px-4 sm:px-6 lg:px-8">
           <div className="max-w-6xl mx-auto">
-            <div className="text-center mb-16">
-              <h2 className="text-4xl md:text-5xl font-bold text-foreground mb-6">
-                Our Legacy of <span className="text-gradient">Excellence</span>
-              </h2>
-              <p className="text-xl text-muted-foreground max-w-3xl mx-auto">
-                From humble beginnings in 1960 to becoming a leading multi-sector conglomerate, 
-                Shanti Group has consistently delivered innovation and quality across diverse industries.
-              </p>
-            </div>
+            <ScrollReveal>
+              <div className="text-center mb-16">
+                <h2 className="text-4xl md:text-5xl font-bold text-foreground mb-6">
+                  Our Legacy of <span className="text-gradient">Excellence</span>
+                </h2>
+                <p className="text-xl text-muted-foreground max-w-3xl mx-auto">
+                  From humble beginnings in 1960 to becoming a leading multi-sector conglomerate, 
+                  Shanti Group has consistently delivered innovation and quality across diverse industries.
+                </p>
+              </div>
+            </ScrollReveal>
             
             <div className="grid md:grid-cols-2 gap-12 items-center">
               <div className="space-y-6">
@@ -162,18 +167,21 @@ const HomePage = () => {
       {/* Sectors Overview */}
       <section className="section-padding bg-muted/30">
         <div className="container mx-auto px-4 sm:px-6 lg:px-8">
-          <div className="text-center mb-16">
-            <h2 className="text-4xl md:text-5xl font-bold text-foreground mb-6">
-              Our <span className="text-gradient">Sectors</span>
-            </h2>
-            <p className="text-xl text-muted-foreground max-w-3xl mx-auto">
-              Diversified excellence across five major industries, each contributing to 
-              sustainable growth and innovation.
-            </p>
-          </div>
+          <ScrollReveal>
+            <div className="text-center mb-16">
+              <h2 className="text-4xl md:text-5xl font-bold text-foreground mb-6">
+                Our <span className="text-gradient">Sectors</span>
+              </h2>
+              <p className="text-xl text-muted-foreground max-w-3xl mx-auto">
+                Diversified excellence across five major industries, each contributing to 
+                sustainable growth and innovation.
+              </p>
+            </div>
+          </ScrollReveal>
 
           <div className="space-y-6">
             {sectors.map((sector, index) => (
+              <ScrollReveal key={index} delay={index * 100}>
               <Card key={index} className="card-premium hover-lift group">
                 <CardContent className="p-8">
                   <div className="flex items-center gap-8">
@@ -197,6 +205,7 @@ const HomePage = () => {
                   </div>
                 </CardContent>
               </Card>
+              </ScrollReveal>
             ))}
           </div>
         </div>
