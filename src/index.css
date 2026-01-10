@@ -1,0 +1,270 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+/* Shanti Group Design System - Professional Corporate Identity */
+
+@layer base {
+  :root {
+    /* Core Brand Colors */
+    --background: 0 0% 100%;
+    --foreground: 220 15% 25%;
+
+    /* Brand Primary - Forest Green from logo */
+    --primary: 180 85% 20%;
+    --primary-foreground: 0 0% 98%;
+    --primary-light: 180 65% 35%;
+    --primary-dark: 180 95% 15%;
+
+    /* Brand Secondary - Golden accent from logo */
+    --secondary: 45 85% 55%;
+    --secondary-foreground: 220 15% 25%;
+    --secondary-light: 45 75% 65%;
+    --secondary-dark: 45 95% 45%;
+
+    /* Corporate Grays */
+    --muted: 220 10% 96%;
+    --muted-foreground: 220 15% 50%;
+    --accent: 220 10% 94%;
+    --accent-foreground: 220 15% 25%;
+
+    /* Functional Colors */
+    --card: 0 0% 100%;
+    --card-foreground: 220 15% 25%;
+    --popover: 0 0% 100%;
+    --popover-foreground: 220 15% 25%;
+    --destructive: 0 84% 60%;
+    --destructive-foreground: 0 0% 98%;
+    --border: 220 13% 91%;
+    --input: 220 13% 91%;
+    --ring: 180 85% 20%;
+
+    /* Design System Properties */
+    --radius: 0.75rem;
+    
+    /* Premium Gradients */
+    --gradient-hero: linear-gradient(135deg, hsl(var(--primary)), hsl(var(--primary-light)));
+    --gradient-accent: linear-gradient(135deg, hsl(var(--secondary)), hsl(var(--secondary-light)));
+    --gradient-subtle: linear-gradient(180deg, hsl(var(--background)), hsl(var(--muted)));
+    --gradient-primary: linear-gradient(135deg, hsl(var(--primary)), hsl(var(--secondary)));
+    --gradient-hero-bg: radial-gradient(ellipse 80% 50% at 50% -20%, hsl(var(--primary) / 0.3), transparent), 
+                        radial-gradient(ellipse 60% 80% at 80% 120%, hsl(var(--secondary) / 0.2), transparent);
+    
+    /* Premium Shadows */
+    --shadow-elegant: 0 10px 30px -10px hsl(var(--primary) / 0.15);
+    --shadow-card: 0 4px 20px -4px hsl(var(--primary) / 0.1);
+    --shadow-glow: 0 0 40px hsl(var(--secondary) / 0.3);
+    
+    /* Transitions */
+    --transition-smooth: all 0.3s cubic-bezier(0.4, 0, 0.2, 1);
+    --transition-spring: all 0.4s cubic-bezier(0.175, 0.885, 0.32, 1.275);
+    
+    /* Typography Scale */
+    --font-display: "Inter", -apple-system, BlinkMacSystemFont, sans-serif;
+    --font-body: "Inter", -apple-system, BlinkMacSystemFont, sans-serif;
+  }
+
+  .dark {
+    /* Dark mode with sophisticated corporate tones */
+    --background: 220 20% 8%;
+    --foreground: 0 0% 95%;
+
+    --primary: 180 85% 25%;
+    --primary-foreground: 0 0% 98%;
+    --primary-light: 180 65% 40%;
+    --primary-dark: 180 95% 20%;
+
+    --secondary: 45 85% 60%;
+    --secondary-foreground: 220 20% 8%;
+    --secondary-light: 45 75% 70%;
+    --secondary-dark: 45 95% 50%;
+
+    --card: 220 20% 10%;
+    --card-foreground: 0 0% 95%;
+    --popover: 220 20% 10%;
+    --popover-foreground: 0 0% 95%;
+    --muted: 220 20% 14%;
+    --muted-foreground: 220 10% 60%;
+    --accent: 220 20% 16%;
+    --accent-foreground: 0 0% 95%;
+    --destructive: 0 62% 50%;
+    --destructive-foreground: 0 0% 98%;
+    --border: 220 20% 18%;
+    --input: 220 20% 18%;
+    --ring: 180 85% 25%;
+
+    /* Dark mode gradients */
+    --gradient-hero: linear-gradient(135deg, hsl(var(--primary)), hsl(var(--primary-light)));
+    --gradient-accent: linear-gradient(135deg, hsl(var(--secondary)), hsl(var(--secondary-light)));
+    --gradient-subtle: linear-gradient(180deg, hsl(var(--background)), hsl(var(--muted)));
+  }
+}
+
+@layer base {
+  * {
+    @apply border-border;
+  }
+
+  body {
+    @apply bg-background text-foreground font-body;
+    font-feature-settings: "rlig" 1, "calt" 1;
+  }
+
+  /* Premium Typography */
+  h1, h2, h3, h4, h5, h6 {
+    @apply font-display;
+    font-feature-settings: "rlig" 1, "calt" 1;
+  }
+
+  /* Smooth scrolling */
+  html {
+    scroll-behavior: smooth;
+  }
+}
+
+@layer components {
+  /* Hero Button Variants */
+  .btn-hero {
+    @apply bg-gradient-to-r from-primary to-primary-light text-primary-foreground px-8 py-4 rounded-lg font-semibold text-lg shadow-elegant hover:shadow-glow transition-all duration-300 hover:scale-105;
+  }
+
+  .btn-secondary-hero {
+    @apply border-2 border-secondary text-secondary px-8 py-4 rounded-lg font-semibold text-lg hover:bg-secondary hover:text-secondary-foreground transition-all duration-300;
+  }
+
+  /* Premium Cards */
+  .card-premium {
+    @apply bg-card/80 backdrop-blur-sm border border-border/50 rounded-xl shadow-card hover:shadow-elegant transition-all duration-300 hover:-translate-y-1;
+  }
+
+  /* Section Spacing */
+  .section-padding {
+    @apply py-20 px-4 md:px-8 lg:px-16;
+  }
+
+  /* Gradient Text */
+  .text-gradient {
+    background-image: linear-gradient(90deg, rgba(8, 94, 94, 1) 0%, rgba(238, 189, 43, 1) 100%);
+    -webkit-background-clip: text;
+    background-clip: text;
+    color: transparent;
+  }
+
+  /* Timeline */
+  .timeline-item {
+    @apply relative pl-8 pb-12 border-l-2 border-primary/30;
+  }
+
+  .timeline-item::before {
+    @apply absolute -left-2 top-0 w-4 h-4 bg-primary rounded-full border-4 border-background;
+    content: '';
+  }
+
+  /* Hover Animations */
+  .hover-lift {
+    @apply transition-all duration-300 hover:-translate-y-2 hover:shadow-elegant;
+  }
+
+  .hover-glow {
+    @apply transition-all duration-300 hover:shadow-glow;
+  }
+
+  /* Typewriter Cursor Animation */
+  @keyframes typewriter-blink {
+    0%, 50% { 
+      opacity: 1; 
+    }
+    51%, 100% { 
+      opacity: 0; 
+    }
+  }
+
+  .typewriter-cursor {
+    animation: typewriter-blink 1s step-end infinite;
+  }
+
+  /* Floating Animation */
+  @keyframes float {
+    0%, 100% {
+      transform: translateY(0px) translateX(0px);
+    }
+    33% {
+      transform: translateY(-20px) translateX(10px);
+    }
+    66% {
+      transform: translateY(-10px) translateX(-10px);
+    }
+  }
+
+  @keyframes float-delayed {
+    0%, 100% {
+      transform: translateY(0px) translateX(0px);
+    }
+    33% {
+      transform: translateY(-15px) translateX(-15px);
+    }
+    66% {
+      transform: translateY(-25px) translateX(15px);
+    }
+  }
+
+  .animate-float {
+    animation: float 6s ease-in-out infinite;
+  }
+
+  .animate-float-delayed {
+    animation: float-delayed 8s ease-in-out infinite;
+  }
+
+  /* Button Glow Effects */
+  .btn-glow {
+    position: relative;
+    overflow: hidden;
+  }
+
+  .btn-glow::before {
+    content: '';
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    width: 0;
+    height: 0;
+    border-radius: 50%;
+    background: rgba(255, 255, 255, 0.5);
+    transform: translate(-50%, -50%);
+    transition: width 0.6s, height 0.6s;
+  }
+
+  .btn-glow:hover::before {
+    width: 300px;
+    height: 300px;
+  }
+
+  .btn-glow-effect {
+    @apply relative overflow-hidden;
+  }
+
+  .btn-glow-effect::after {
+    content: '';
+    @apply absolute inset-0 opacity-0 transition-opacity duration-300;
+    background: radial-gradient(circle, rgba(8, 94, 94, 0.4) 0%, transparent 70%);
+    filter: blur(20px);
+  }
+
+  .btn-glow-effect:hover::after {
+    opacity: 1;
+  }
+
+  /* Enhanced Glassmorphic Effect */
+  .glass-effect {
+    background: rgba(255, 255, 255, 0.7);
+    backdrop-filter: blur(20px) saturate(180%);
+    -webkit-backdrop-filter: blur(20px) saturate(180%);
+    border: 1px solid rgba(255, 255, 255, 0.3);
+  }
+
+  .dark .glass-effect {
+    background: rgba(20, 20, 20, 0.7);
+    border: 1px solid rgba(255, 255, 255, 0.1);
+  }
+}
