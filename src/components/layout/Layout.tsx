@@ -11,7 +11,7 @@ const Layout = ({ children }: LayoutProps) => {
     <div className="min-h-screen flex flex-col">
       <ScrollToTop />
       <Header />
-      <main className="flex-1 pt-20">
+      <main className="flex-1 pt-16 sm:pt-20 lg:pt-24">
         {children}
       </main>
       <Footer />

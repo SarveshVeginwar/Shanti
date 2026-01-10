@@ -1,89 +1,145 @@
-import { Card, CardContent, CardDescription, CardHeader, CardTitle } from "@/components/ui/card";
+import { useState, useEffect } from "react";
 import { Button } from "@/components/ui/button";
-import { Factory, Cog, Truck, Award } from "lucide-react";
+import { ArrowRight, Factory, Settings } from "lucide-react";
 
 const ManufacturingPage = () => {
-  const capabilities = [
-    {
-      title: "Production Excellence",
-      description: "State-of-the-art manufacturing facilities with quality control",
-      icon: <Factory className="h-6 w-6" />,
-    },
-    {
-      title: "Process Optimization",
-      description: "Lean manufacturing principles for maximum efficiency",
-      icon: <Cog className="h-6 w-6" />,
-    },
-    {
-      title: "Supply Chain",
-      description: "Integrated supply chain management and logistics solutions",
-      icon: <Truck className="h-6 w-6" />,
-    },
-    {
-      title: "Quality Assurance",
-      description: "Rigorous quality standards and certification processes",
-      icon: <Award className="h-6 w-6" />,
-    },
+  const [currentImageIndex, setCurrentImageIndex] = useState(0);
+
+  const heroImages = [
+    "https://images.unsplash.com/photo-1581091226825-a6a2a5aee158?q=80&w=2670&auto=format&fit=crop", // Industrial Factory
+    "https://images.unsplash.com/photo-1565439396656-e4ef6595a8bf?q=80&w=2670&auto=format&fit=crop", // Machinery 1
+    "https://images.unsplash.com/photo-1537462713205-e513d5509d36?q=80&w=2670&auto=format&fit=crop", // Modern Factory
+    "https://images.unsplash.com/photo-1621905251189-08b45d6a269e?q=80&w=2669&auto=format&fit=crop"  // Engineering
   ];
 
+  useEffect(() => {
+    const interval = setInterval(() => {
+      setCurrentImageIndex((prevIndex) => (prevIndex + 1) % heroImages.length);
+    }, 5000);
+
+    return () => clearInterval(interval);
+  }, []);
+
   return (
-    <div className="min-h-screen bg-gradient-subtle">
+    <div className="min-h-screen bg-white">
       {/* Hero Section */}
-      <section className="py-20 bg-gradient-to-r from-orange-600/10 to-red-400/10">
-        <div className="container mx-auto px-4 sm:px-6 lg:px-8 text-center">
-          <h1 className="text-4xl md:text-6xl font-bold text-gradient mb-6">
-            Manufacturing
+      <section className="relative h-[40vh] md:h-[50vh] flex items-center justify-center overflow-hidden">
+        <div className="absolute inset-0 bg-black/50 z-10" />
+
+        {/* Background Slideshow */}
+        {heroImages.map((image, index) => (
+          <div
+            key={index}
+            className={`absolute inset-0 bg-cover bg-center transition-opacity duration-1000 ease-in-out ${index === currentImageIndex ? "opacity-100" : "opacity-0"
+              }`}
+            style={{
+              backgroundImage: `url('${image}')`
+            }}
+          />
+        ))}
+
+        <div className="relative z-20 text-center text-white px-4">
+          <h1 className="text-4xl md:text-6xl font-bold mb-4 tracking-tight drop-shadow-md">
+            Manufacturing Division
           </h1>
-          <p className="text-xl text-muted-foreground max-w-3xl mx-auto">
-            Excellence in manufacturing with advanced production capabilities, 
-            quality assurance, and sustainable practices.
+          <p className="text-xl md:text-2xl font-light opacity-95 max-w-2xl mx-auto drop-shadow-sm">
+            Excellence in industrial production and quality engineering
           </p>
         </div>
       </section>
 
-      {/* Capabilities Section */}
-      <section className="py-20">
-        <div className="container mx-auto px-4 sm:px-6 lg:px-8">
-          <h2 className="text-3xl md:text-4xl font-bold text-center mb-12">
-            Our Manufacturing Capabilities
-          </h2>
-          <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-8">
-            {capabilities.map((capability, index) => (
-              <Card key={index} className="text-center hover:shadow-lg transition-shadow duration-300">
-                <CardHeader>
-                  <div className="mx-auto mb-4 text-orange-600">
-                    {capability.icon}
-                  </div>
-                  <CardTitle className="text-xl">{capability.title}</CardTitle>
-                </CardHeader>
-                <CardContent>
-                  <CardDescription>{capability.description}</CardDescription>
-                </CardContent>
-              </Card>
-            ))}
-          </div>
-        </div>
-      </section>
+      <div className="container mx-auto px-4 py-20 max-w-6xl">
 
-      {/* Excellence Section */}
-      <section className="py-20 bg-primary/5">
-        <div className="container mx-auto px-4 sm:px-6 lg:px-8">
-          <div className="max-w-4xl mx-auto text-center">
-            <h2 className="text-3xl md:text-4xl font-bold mb-8">
-              Manufacturing Excellence
-            </h2>
-            <p className="text-lg text-muted-foreground mb-8">
-              Our manufacturing division combines traditional craftsmanship with 
-              modern technology to deliver products that meet the highest standards 
-              of quality, reliability, and sustainability. We're committed to 
-              continuous improvement and innovation in all our processes.
+        {/* Item 01 - Industrial Manufacturing */}
+        <div className="flex flex-col md:flex-row gap-12 mb-32 items-center">
+          <div className="w-full md:w-1/2 relative group">
+            <div className="relative overflow-hidden aspect-[4/3] shadow-xl">
+              <div className="absolute inset-0 bg-gradient-to-br from-slate-50 to-slate-100 flex items-center justify-center group-hover:scale-105 transition-transform duration-700">
+                <Factory className="w-24 h-24 text-slate-600/20" />
+                <img
+                  src="https://images.unsplash.com/photo-1635334657371-q=80&w=2670&auto=format&fit=crop" // Note: This URL might be invalid if cut off, using a simpler reliable one below
+                  srcSet="https://images.unsplash.com/photo-1504917595217-d4dc5ebe6122?q=80&w=2670&auto=format&fit=crop"
+                  alt="Industrial Manufacturing"
+                  className="absolute inset-0 w-full h-full object-cover opacity-90"
+                />
+              </div>
+            </div>
+          </div>
+
+          <div className="w-full md:w-1/2 md:pl-8">
+            <div className="relative mb-6">
+              <span className="text-8xl font-bold text-transparent absolute -top-16 -left-4 md:-left-8 opacity-20 select-none pointer-events-none"
+                style={{ WebkitTextStroke: "2px #1a1a1a" }}>
+                01
+              </span>
+              <h2 className="text-3xl md:text-4xl font-serif font-bold text-gray-900 relative z-10">
+                Industrial Manufacturing
+              </h2>
+            </div>
+
+            <p className="text-gray-600 leading-relaxed mb-4 text-lg">
+              We specialize in the large-scale production of essential industrial chemicals and fertilizers. 
+              Our state-of-the-art facilities in Gujarat are equipped to manufacture high-grade 
+              Zinc Sulphate Monohydrate and Copper Sulphate.
             </p>
-            <Button size="lg" className="btn-primary">
-              View Our Facilities
+            <p className="text-gray-600 leading-relaxed mb-8 text-lg">
+                Committed to supporting both industrial and agricultural sectors, we ensure consistent supply chains and 
+                superior product purity.
+            </p>
+
+            <Button
+              className="bg-[#0f2c4a] hover:bg-[#0a1f35] text-white rounded-none px-8 py-6 text-sm tracking-widest uppercase font-semibold transition-all group"
+            >
+              Contact Us
+              <ArrowRight className="ml-2 h-4 w-4 group-hover:translate-x-1 transition-transform" />
             </Button>
           </div>
         </div>
-      </section>
+
+        {/* Item 02 - Quality Production */}
+        <div className="flex flex-col md:flex-row-reverse gap-12 items-center">
+          <div className="w-full md:w-1/2 relative group">
+            <div className="relative overflow-hidden aspect-[4/3] shadow-xl">
+              <div className="absolute inset-0 bg-gradient-to-br from-stone-50 to-stone-100 flex items-center justify-center group-hover:scale-105 transition-transform duration-700">
+                <Settings className="w-24 h-24 text-stone-600/20" />
+                <img
+                  src="https://images.unsplash.com/photo-1581093458791-9f3c3900df4b?q=80&w=2670&auto=format&fit=crop"
+                  alt="Quality Production"
+                  className="absolute inset-0 w-full h-full object-cover opacity-90"
+                />
+              </div>
+            </div>
+          </div>
+
+          <div className="w-full md:w-1/2 md:pr-8 text-right md:text-left">
+            <div className="relative mb-6 md:text-left text-left">
+              <span className="text-8xl font-bold text-transparent absolute -top-16 -left-4 md:-left-8 opacity-20 select-none pointer-events-none"
+                style={{ WebkitTextStroke: "2px #1a1a1a" }}>
+                02
+              </span>
+              <h2 className="text-3xl md:text-4xl font-serif font-bold text-gray-900 relative z-10">
+                Quality Engineering
+              </h2>
+            </div>
+
+            <p className="text-gray-600 leading-relaxed mb-8 text-lg md:text-left text-left">
+              Our manufacturing processes are driven by precision and quality. We adhere to strict global standards, 
+              utilizing advanced engineering techniques to minimize waste and maximize efficiency. 
+              Every batch undergoes rigorous quality control testing.
+            </p>
+
+            <div className="flex justify-start">
+              <Button
+                className="bg-[#0f2c4a] hover:bg-[#0a1f35] text-white rounded-none px-8 py-6 text-sm tracking-widest uppercase font-semibold transition-all group"
+              >
+                Learn More
+                <ArrowRight className="ml-2 h-4 w-4 group-hover:translate-x-1 transition-transform" />
+              </Button>
+            </div>
+          </div>
+        </div>
+
+      </div>
     </div>
   );
 };
