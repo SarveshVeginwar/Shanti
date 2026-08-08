@@ -9,10 +9,15 @@ import AboutPage from "./pages/AboutPage";
 import BusinessesPage from "./pages/BusinessesPage";
 import RealEstatePage from "./pages/RealEstatePage";
 import PharmaPage from "./pages/PharmaPage";
-import AgriculturePage from "./pages/AgriculturePage";
+import IndustriesPage from "./pages/IndustriesPage";
 import TechnologyPage from "./pages/TechnologyPage";
 import ManufacturingPage from "./pages/ManufacturingPage";
 import ContactPage from "./pages/ContactPage";
+import ShantiAgroIndustry from "./pages/ShantiAgroIndustry";
+import VinodRiceMill from "./pages/VinodRiceMill";
+import RohitMedicalAgency from "./pages/RohitMedicalAgency";
+import RealEstateProjects from "./pages/RealEstateProjects";
+import AwadhNagariProject from "./pages/AwadhNagariProject";
 import NotFound from "./pages/NotFound";
 
 const queryClient = new QueryClient();
@@ -30,10 +35,15 @@ const App = () => (
             <Route path="/businesses" element={<BusinessesPage />} />
             <Route path="/real-estate" element={<RealEstatePage />} />
             <Route path="/pharma" element={<PharmaPage />} />
-            <Route path="/agriculture" element={<AgriculturePage />} />
+            <Route path="/industries" element={<IndustriesPage />} />
             <Route path="/technology" element={<TechnologyPage />} />
             <Route path="/manufacturing" element={<ManufacturingPage />} />
             <Route path="/contact" element={<ContactPage />} />
+            <Route path="/industries/shanti-agro" element={<ShantiAgroIndustry />} />
+            <Route path="/industries/vinod-rice-mill" element={<VinodRiceMill />} />
+            <Route path="/pharma/rohit-medical" element={<RohitMedicalAgency />} />
+            <Route path="/real-estate/projects" element={<RealEstateProjects />} />
+            <Route path="/real-estate/projects/awadh-nagari" element={<AwadhNagariProject />} />
             {/* ADD ALL CUSTOM ROUTES ABOVE THE CATCH-ALL "*" ROUTE */}
             <Route path="*" element={<NotFound />} />
           </Routes>

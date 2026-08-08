@@ -4,7 +4,7 @@ import shantiLogo from "@/assets/shanti-logo-dark.jpeg";
 
 const Footer = () => {
   const sectors = [
-    { name: "Agriculture", href: "/agriculture" },
+    { name: "Industries", href: "/industries" },
     { name: "Pharmaceuticals", href: "/pharma" },
     { name: "Real Estate", href: "/real-estate" },
     { name: "Technology", href: "/technology" },
@@ -24,13 +24,13 @@ const Footer = () => {
         <div className="py-16 grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-8">
           {/* Company Info */}
           <div className="space-y-6">
-            <img 
-              src={shantiLogo} 
-              alt="Shanti Group Logo" 
+            <img
+              src={shantiLogo}
+              alt="Shanti Group Logo"
               className="h-12 w-auto object-contain"
             />
             <p className="text-muted-foreground leading-relaxed">
-              Building a sustainable future across multiple industries since 1960. 
+              Building a sustainable future across multiple industries since 1960.
               A trusted name in agriculture, pharmaceuticals, real estate, and technology.
             </p>
             <div className="flex space-x-4">
@@ -52,7 +52,7 @@ const Footer = () => {
             <ul className="space-y-3">
               {sectors.map((sector) => (
                 <li key={sector.name}>
-                  <Link 
+                  <Link
                     to={sector.href}
                     className="text-muted-foreground hover:text-primary transition-colors duration-200 flex items-center group"
                   >
@@ -70,7 +70,7 @@ const Footer = () => {
             <ul className="space-y-3">
               {quickLinks.map((link) => (
                 <li key={link.name}>
-                  <Link 
+                  <Link
                     to={link.href}
                     className="text-muted-foreground hover:text-primary transition-colors duration-200 flex items-center group"
                   >

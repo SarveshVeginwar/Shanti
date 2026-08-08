@@ -17,8 +17,8 @@ const HomePage = () => {
   // Parallax hook
   const sustainabilityRef = useRef(null);
   const { scrollYProgress: sustainabilityScroll } = useScroll({
-      target: sustainabilityRef,
-      offset: ["start end", "end start"]
+    target: sustainabilityRef,
+    offset: ["start end", "end start"]
   });
   const parallaxY = useTransform(sustainabilityScroll, [0, 1], [0, 200]);
 
@@ -125,9 +125,9 @@ const HomePage = () => {
   const sectors = [
     {
       icon: Leaf,
-      name: "Agriculture",
+      name: "Industries",
       description: "Sustainable farming solutions and agricultural innovation for a better tomorrow.",
-      href: "/agriculture",
+      href: "/industries",
       color: "text-green-600"
     },
     {
@@ -169,20 +169,20 @@ const HomePage = () => {
 
   // Sector diagram layout - matching the image design
   const getSectorData = (name: string) => sectors.find(s => s.name === name)!;
-  
+
   const sectorsTop = [
-    getSectorData("Agriculture"),
+    getSectorData("Industries"),
     getSectorData("Real Estate"),
     getSectorData("Manufacturing")
   ];
-  
+
   const sectorsBottom = [
     getSectorData("Pharmaceuticals"),
     getSectorData("Technology")
   ];
 
-// Simple animated counter component
-const AnimatedCounter = ({ value }: { value: string }) => {
+  // Simple animated counter component
+  const AnimatedCounter = ({ value }: { value: string }) => {
     // Extract numeric part if present
     const numericValue = parseInt(value.replace(/\D/g, '')) || 0;
     const suffix = value.replace(/[0-9]/g, '');
@@ -191,34 +191,34 @@ const AnimatedCounter = ({ value }: { value: string }) => {
     const [displayValue, setDisplayValue] = useState(0);
 
     useEffect(() => {
-        springValue.on("change", (latest) => {
-            setDisplayValue(Math.round(latest));
-        });
+      springValue.on("change", (latest) => {
+        setDisplayValue(Math.round(latest));
+      });
     }, [springValue]);
 
     useEffect(() => {
-        const unsubscribe = springValue.on("change", (latest) => {
-            setDisplayValue(Math.round(latest));
-        });
-        return () => unsubscribe();
+      const unsubscribe = springValue.on("change", (latest) => {
+        setDisplayValue(Math.round(latest));
+      });
+      return () => unsubscribe();
     }, [springValue]);
 
     const handleViewportEnter = () => {
-        motionValue.set(numericValue);
+      motionValue.set(numericValue);
     };
 
     return (
-        <span className="inline-flex">
-            <motion.span
-                onViewportEnter={handleViewportEnter}
-                viewport={{ once: false }}
-            >
-                {displayValue}
-            </motion.span>
-            {suffix}
-        </span>
+      <span className="inline-flex">
+        <motion.span
+          onViewportEnter={handleViewportEnter}
+          viewport={{ once: false }}
+        >
+          {displayValue}
+        </motion.span>
+        {suffix}
+      </span>
     );
-};
+  };
 
   return (
     <div className="min-h-screen -mt-16 sm:-mt-20 lg:-mt-24">
@@ -226,38 +226,38 @@ const AnimatedCounter = ({ value }: { value: string }) => {
       <section className="relative min-h-screen flex items-center justify-center bg-gradient-subtle overflow-hidden pt-16 sm:pt-20 lg:pt-24">
         {/* Interactive Metamask-style Background */}
         <InteractiveHeroBackground />
-        
+
         {/* Floating Icons - Apple-style subtle parallax */}
         <motion.div
-            className="absolute top-1/4 left-1/4 text-primary/30 pointer-events-none"
-            animate={{
-                y: [0, -20, 0],
-                rotate: [0, 5, -5, 0],
-            }}
-            transition={{
-                duration: 6,
-                repeat: Infinity,
-                ease: "easeInOut",
-            }}
+          className="absolute top-1/4 left-1/4 text-primary/30 pointer-events-none"
+          animate={{
+            y: [0, -20, 0],
+            rotate: [0, 5, -5, 0],
+          }}
+          transition={{
+            duration: 6,
+            repeat: Infinity,
+            ease: "easeInOut",
+          }}
         >
-            <Leaf size={40} />
+          <Leaf size={40} />
         </motion.div>
         <motion.div
-            className="absolute top-1/3 right-1/4 text-secondary/30 pointer-events-none"
-            animate={{
-                y: [0, -25, 0],
-                rotate: [0, -5, 5, 0],
-            }}
-            transition={{
-                duration: 7,
-                repeat: Infinity,
-                ease: "easeInOut",
-                delay: 1,
-            }}
+          className="absolute top-1/3 right-1/4 text-secondary/30 pointer-events-none"
+          animate={{
+            y: [0, -25, 0],
+            rotate: [0, -5, 5, 0],
+          }}
+          transition={{
+            duration: 7,
+            repeat: Infinity,
+            ease: "easeInOut",
+            delay: 1,
+          }}
         >
-            <Sparkles size={35} />
+          <Sparkles size={35} />
         </motion.div>
-        
+
         <div className="container mx-auto px-4 sm:px-6 lg:px-8 text-center relative z-10">
           <div className="max-w-4xl mx-auto space-y-4">
             <motion.div
@@ -281,27 +281,27 @@ const AnimatedCounter = ({ value }: { value: string }) => {
                 }}
               />
             </motion.div>
-            
+
             <motion.div
-                initial={{ opacity: 0, y: 40 }}
-                whileInView={{ opacity: 1, y: 0 }}
-                viewport={{ once: false }} /* Allow reverse animation */
-                transition={{ duration: 0.8 }}
+              initial={{ opacity: 0, y: 40 }}
+              whileInView={{ opacity: 1, y: 0 }}
+              viewport={{ once: false }} /* Allow reverse animation */
+              transition={{ duration: 0.8 }}
             >
-                <h1 className="text-4xl md:text-5xl lg:text-7xl font-bold text-gradient leading-tight min-h-[1.2em]">
+              <h1 className="text-4xl md:text-5xl lg:text-7xl font-bold text-gradient leading-tight min-h-[1.2em]">
                 <Typewriter
-                    text="Shanti Group"
-                    speed={150}
-                    delay={800}
-                    className="text-gradient drop-shadow-sm"
-                    showCursor={true}
-                    loop={true}
-                    pauseTime={3000}
-                    eraseSpeed={50}
+                  text="Shanti Group"
+                  speed={150}
+                  delay={800}
+                  className="text-gradient drop-shadow-sm"
+                  showCursor={true}
+                  loop={true}
+                  pauseTime={3000}
+                  eraseSpeed={50}
                 />
-                </h1>
+              </h1>
             </motion.div>
-            
+
             <motion.p
               className="text-xl md:text-2xl text-muted-foreground max-w-3xl mx-auto leading-relaxed"
               initial={{ opacity: 0, y: 30 }}
@@ -314,7 +314,7 @@ const AnimatedCounter = ({ value }: { value: string }) => {
               <span className="text-primary font-semibold"> real estate</span>, and
               <span className="text-primary font-semibold"> technology</span> since 1960.
             </motion.p>
-            
+
             <motion.div
               className="flex flex-col sm:flex-row gap-4 justify-center pt-8"
               initial={{ opacity: 0, y: 20 }}
@@ -424,14 +424,14 @@ const AnimatedCounter = ({ value }: { value: string }) => {
                 Our Legacy of <span className="text-gradient">Excellence</span>
               </h2>
               <div className="max-w-3xl mx-auto">
-                <ScrollRevealText 
+                <ScrollRevealText
                   text="From humble beginnings in 1960 to becoming a leading multi-sector conglomerate, Shanti Group has consistently delivered innovation and quality across diverse industries."
                   className="text-xl text-muted-foreground font-medium"
                   contianerClassName="justify-center"
                 />
               </div>
             </motion.div>
-            
+
             <div className="grid md:grid-cols-2 gap-12 items-center">
               <motion.div
                 className="space-y-6"
@@ -443,12 +443,12 @@ const AnimatedCounter = ({ value }: { value: string }) => {
                 <div className="space-y-4">
                   <h3 className="text-2xl font-semibold text-foreground">Our Story</h3>
                   <p className="text-muted-foreground leading-relaxed">
-                    Started in 1960 with a vision to create sustainable value across multiple sectors, 
-                    Shanti Group has grown from a single agricultural venture to a diversified conglomerate 
+                    Started in 1960 with a vision to create sustainable value across multiple sectors,
+                    Shanti Group has grown from a single agricultural venture to a diversified conglomerate
                     that touches millions of lives every day.
                   </p>
                   <p className="text-muted-foreground leading-relaxed">
-                    Today, we operate across four major sectors, each contributing to our mission of 
+                    Today, we operate across four major sectors, each contributing to our mission of
                     building a better tomorrow through innovation, sustainability, and excellence.
                   </p>
                 </div>
@@ -467,7 +467,7 @@ const AnimatedCounter = ({ value }: { value: string }) => {
                   </Link>
                 </motion.div>
               </motion.div>
-              
+
               <motion.div
                 className="relative"
                 initial={{ opacity: 0, x: 50 }}
@@ -487,7 +487,7 @@ const AnimatedCounter = ({ value }: { value: string }) => {
                   <div className="relative z-10">
                     <h4 className="text-xl font-semibold mb-4">Our Mission</h4>
                     <p className="leading-relaxed mb-6">
-                      To be a leader in sustainable business practices while creating value for 
+                      To be a leader in sustainable business practices while creating value for
                       stakeholders and contributing to societal development across all our sectors.
                     </p>
                     <div className="flex items-center space-x-2 text-primary-foreground/80">
@@ -517,26 +517,26 @@ const AnimatedCounter = ({ value }: { value: string }) => {
               Our <span className="text-gradient">Sectors</span>
             </h2>
             <p className="text-xl text-muted-foreground max-w-3xl mx-auto leading-relaxed">
-              Diversified excellence across five major industries, each contributing to 
+              Diversified excellence across five major industries, each contributing to
               sustainable growth and innovation.
             </p>
           </motion.div>
 
           {/* Staggered Container */}
-          <motion.div 
+          <motion.div
             className="relative max-w-6xl mx-auto px-4"
             initial="hidden"
             whileInView="visible"
             viewport={{ once: false, margin: "-50px" }}
             variants={{
-                hidden: { opacity: 0 },
-                visible: { 
-                    opacity: 1,
-                    transition: { 
-                        staggerChildren: 0.15,
-                        delayChildren: 0.2
-                    }
+              hidden: { opacity: 0 },
+              visible: {
+                opacity: 1,
+                transition: {
+                  staggerChildren: 0.15,
+                  delayChildren: 0.2
                 }
+              }
             }}
           >
             <div className="relative flex flex-col items-center min-h-[400px] md:min-h-[450px]">
@@ -547,11 +547,11 @@ const AnimatedCounter = ({ value }: { value: string }) => {
                   className="w-[160px] sm:w-[180px] md:w-[200px] lg:w-[220px]"
                   variants={{
                     hidden: { opacity: 0, y: 50, scale: 0.9 },
-                    visible: { 
-                        opacity: 1, 
-                        y: 0, 
-                        scale: 1,
-                        transition: { type: "spring", stiffness: 100, damping: 12 }
+                    visible: {
+                      opacity: 1,
+                      y: 0,
+                      scale: 1,
+                      transition: { type: "spring", stiffness: 100, damping: 12 }
                     }
                   }}
                 >
@@ -579,11 +579,11 @@ const AnimatedCounter = ({ value }: { value: string }) => {
                   className="w-[160px] sm:w-[180px] md:w-[200px] lg:w-[220px]"
                   variants={{
                     hidden: { opacity: 0, y: 50, scale: 0.9 },
-                    visible: { 
-                        opacity: 1, 
-                        y: 0, 
-                        scale: 1,
-                        transition: { type: "spring", stiffness: 100, damping: 12 }
+                    visible: {
+                      opacity: 1,
+                      y: 0,
+                      scale: 1,
+                      transition: { type: "spring", stiffness: 100, damping: 12 }
                     }
                   }}
                 >
@@ -611,11 +611,11 @@ const AnimatedCounter = ({ value }: { value: string }) => {
                   className="w-[160px] sm:w-[180px] md:w-[200px] lg:w-[220px]"
                   variants={{
                     hidden: { opacity: 0, y: 50, scale: 0.9 },
-                    visible: { 
-                        opacity: 1, 
-                        y: 0, 
-                        scale: 1,
-                        transition: { type: "spring", stiffness: 100, damping: 12 }
+                    visible: {
+                      opacity: 1,
+                      y: 0,
+                      scale: 1,
+                      transition: { type: "spring", stiffness: 100, damping: 12 }
                     }
                   }}
                 >
@@ -643,17 +643,17 @@ const AnimatedCounter = ({ value }: { value: string }) => {
               <div className="flex flex-wrap justify-center items-center gap-6 md:gap-8 lg:gap-10 xl:gap-12 w-full">
                 {/* Spacer */}
                 <div className="hidden md:block w-[160px] sm:w-[180px] md:w-[200px] lg:w-[220px]" />
-                
+
                 {/* Pharmaceuticals */}
                 <motion.div
                   className="w-[160px] sm:w-[180px] md:w-[200px] lg:w-[220px]"
                   variants={{
                     hidden: { opacity: 0, y: 50, scale: 0.9 },
-                    visible: { 
-                        opacity: 1, 
-                        y: 0, 
-                        scale: 1,
-                        transition: { type: "spring", stiffness: 100, damping: 12 }
+                    visible: {
+                      opacity: 1,
+                      y: 0,
+                      scale: 1,
+                      transition: { type: "spring", stiffness: 100, damping: 12 }
                     }
                   }}
                 >
@@ -681,11 +681,11 @@ const AnimatedCounter = ({ value }: { value: string }) => {
                   className="w-[160px] sm:w-[180px] md:w-[200px] lg:w-[220px]"
                   variants={{
                     hidden: { opacity: 0, y: 50, scale: 0.9 },
-                    visible: { 
-                        opacity: 1, 
-                        y: 0, 
-                        scale: 1,
-                        transition: { type: "spring", stiffness: 100, damping: 12 }
+                    visible: {
+                      opacity: 1,
+                      y: 0,
+                      scale: 1,
+                      transition: { type: "spring", stiffness: 100, damping: 12 }
                     }
                   }}
                 >
@@ -718,11 +718,11 @@ const AnimatedCounter = ({ value }: { value: string }) => {
 
       {/* Sustainability Section */}
       <section ref={sustainabilityRef} className="relative section-padding overflow-hidden bg-gradient-to-b from-background via-green-50/30 to-background dark:via-green-950/10">
-        <motion.div 
-            style={{ y: parallaxY }}
-            className="absolute inset-0 bg-[radial-gradient(ellipse_at_top,_var(--tw-gradient-stops))] from-green-50/40 via-transparent to-transparent dark:from-green-950/20 pointer-events-none" 
+        <motion.div
+          style={{ y: parallaxY }}
+          className="absolute inset-0 bg-[radial-gradient(ellipse_at_top,_var(--tw-gradient-stops))] from-green-50/40 via-transparent to-transparent dark:from-green-950/20 pointer-events-none"
         />
-        
+
         <div className="container mx-auto px-4 sm:px-6 lg:px-8 relative z-10">
           <div className="max-w-7xl mx-auto">
             <motion.div
@@ -890,7 +890,7 @@ const AnimatedCounter = ({ value }: { value: string }) => {
         <div className="container mx-auto px-4 sm:px-6 lg:px-8">
           <div className="flex flex-col lg:flex-row items-center gap-12 lg:gap-16 max-w-7xl mx-auto">
             {/* Left side - Heading */}
-            <motion.div 
+            <motion.div
               className="lg:w-2/5 text-center lg:text-left"
               initial={{ opacity: 0, x: -50 }}
               whileInView={{ opacity: 1, x: 0 }}
@@ -921,7 +921,7 @@ const AnimatedCounter = ({ value }: { value: string }) => {
                   transition={{ duration: 0.5, delay: 0.2 }}
                   whileHover={{ scale: 1.1, y: -10 }}
                 >
-                  <motion.div 
+                  <motion.div
                     className="w-24 h-24 md:w-28 md:h-28 bg-gradient-to-br from-yellow-400 to-orange-500 rounded-full flex items-center justify-center mx-auto mb-4 shadow-lg cursor-pointer"
                     whileHover={{ rotate: 360 }}
                     transition={{ duration: 0.6 }}
@@ -941,7 +941,7 @@ const AnimatedCounter = ({ value }: { value: string }) => {
                   transition={{ duration: 0.5, delay: 0.3 }}
                   whileHover={{ scale: 1.1, y: -10 }}
                 >
-                  <motion.div 
+                  <motion.div
                     className="w-24 h-24 md:w-28 md:h-28 bg-gradient-to-br from-blue-400 to-cyan-500 rounded-full flex items-center justify-center mx-auto mb-4 shadow-lg cursor-pointer"
                     whileHover={{ rotate: 360 }}
                     transition={{ duration: 0.6 }}
@@ -961,7 +961,7 @@ const AnimatedCounter = ({ value }: { value: string }) => {
                   transition={{ duration: 0.5, delay: 0.4 }}
                   whileHover={{ scale: 1.1, y: -10 }}
                 >
-                  <motion.div 
+                  <motion.div
                     className="w-24 h-24 md:w-28 md:h-28 bg-gradient-to-br from-green-400 to-emerald-500 rounded-full flex items-center justify-center mx-auto mb-4 shadow-lg cursor-pointer"
                     whileHover={{ rotate: 360 }}
                     transition={{ duration: 0.6 }}
@@ -981,7 +981,7 @@ const AnimatedCounter = ({ value }: { value: string }) => {
                   transition={{ duration: 0.5, delay: 0.5 }}
                   whileHover={{ scale: 1.1, y: -10 }}
                 >
-                  <motion.div 
+                  <motion.div
                     className="w-24 h-24 md:w-28 md:h-28 bg-gradient-to-br from-purple-400 to-pink-500 rounded-full flex items-center justify-center mx-auto mb-4 shadow-lg cursor-pointer"
                     whileHover={{ rotate: 360 }}
                     transition={{ duration: 0.6 }}
@@ -993,7 +993,7 @@ const AnimatedCounter = ({ value }: { value: string }) => {
                 </motion.div>
 
                 {/* Decorative connecting arc (optional visual enhancement) */}
-                <svg 
+                <svg
                   className="hidden md:block absolute inset-0 w-full h-full pointer-events-none opacity-10"
                   viewBox="0 0 100 100"
                   preserveAspectRatio="none"
@@ -1152,7 +1152,7 @@ const AnimatedCounter = ({ value }: { value: string }) => {
               Ready to <span className="text-gradient">Partner</span> with Us?
             </h2>
             <p className="text-xl text-muted-foreground mb-8 max-w-2xl mx-auto">
-              Join hands with Shanti Group to explore opportunities across our diverse sectors 
+              Join hands with Shanti Group to explore opportunities across our diverse sectors
               and be part of our journey towards sustainable growth.
             </p>
             <motion.div

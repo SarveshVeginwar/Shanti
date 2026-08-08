@@ -1,8 +1,10 @@
 import { useState, useEffect } from "react";
+import { useNavigate } from "react-router-dom";
 import { Button } from "@/components/ui/button";
 import { ArrowRight, Pill, ShieldCheck, Building2 } from "lucide-react";
 
 const PharmaPage = () => {
+  const navigate = useNavigate();
   const [currentImageIndex, setCurrentImageIndex] = useState(0);
 
   const heroImages = [
@@ -82,13 +84,14 @@ const PharmaPage = () => {
               products to hospitals, clinics, and medical institutions.
             </p>
             <p className="text-gray-600 leading-relaxed mb-8 text-lg">
-                We bridge the gap between manufacturers and healthcare providers, ensuring accessibility to vital medications.
+              We bridge the gap between manufacturers and healthcare providers, ensuring accessibility to vital medications.
             </p>
 
             <Button
+              onClick={() => navigate("/pharma/rohit-medical")}
               className="bg-[#0f2c4a] hover:bg-[#0a1f35] text-white rounded-none px-8 py-6 text-sm tracking-widest uppercase font-semibold transition-all group"
             >
-              Contact Us
+              VISIT PAGE
               <ArrowRight className="ml-2 h-4 w-4 group-hover:translate-x-1 transition-transform" />
             </Button>
           </div>

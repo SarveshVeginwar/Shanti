@@ -6,10 +6,10 @@ const ManufacturingPage = () => {
   const [currentImageIndex, setCurrentImageIndex] = useState(0);
 
   const heroImages = [
-    "https://images.unsplash.com/photo-1581091226825-a6a2a5aee158?q=80&w=2670&auto=format&fit=crop", // Industrial Factory
-    "https://images.unsplash.com/photo-1565439396656-e4ef6595a8bf?q=80&w=2670&auto=format&fit=crop", // Machinery 1
-    "https://images.unsplash.com/photo-1537462713205-e513d5509d36?q=80&w=2670&auto=format&fit=crop", // Modern Factory
-    "https://images.unsplash.com/photo-1621905251189-08b45d6a269e?q=80&w=2669&auto=format&fit=crop"  // Engineering
+    "https://images.unsplash.com/photo-1625246333195-bf404ec0e24f?q=80&w=2626&auto=format&fit=crop", // Farming field
+    "https://images.unsplash.com/photo-1574943320219-553eb213f72d?q=80&w=2540&auto=format&fit=crop", // Wheat close up
+    "https://images.unsplash.com/photo-1586201375761-83865001e31c?q=80&w=2000&auto=format&fit=crop", // Rice grains
+    "https://images.unsplash.com/photo-1500382017468-9049fed747ef?q=80&w=2832&auto=format&fit=crop"  // Green field landscape
   ];
 
   useEffect(() => {
@@ -78,13 +78,13 @@ const ManufacturingPage = () => {
             </div>
 
             <p className="text-gray-600 leading-relaxed mb-4 text-lg">
-              We specialize in the large-scale production of essential industrial chemicals and fertilizers. 
-              Our state-of-the-art facilities in Gujarat are equipped to manufacture high-grade 
+              We specialize in the large-scale production of essential industrial chemicals and fertilizers.
+              Our state-of-the-art facilities in Gujarat are equipped to manufacture high-grade
               Zinc Sulphate Monohydrate and Copper Sulphate.
             </p>
             <p className="text-gray-600 leading-relaxed mb-8 text-lg">
-                Committed to supporting both industrial and agricultural sectors, we ensure consistent supply chains and 
-                superior product purity.
+              Committed to supporting both industrial and agricultural sectors, we ensure consistent supply chains and
+              superior product purity.
             </p>
 
             <Button
@@ -123,8 +123,8 @@ const ManufacturingPage = () => {
             </div>
 
             <p className="text-gray-600 leading-relaxed mb-8 text-lg md:text-left text-left">
-              Our manufacturing processes are driven by precision and quality. We adhere to strict global standards, 
-              utilizing advanced engineering techniques to minimize waste and maximize efficiency. 
+              Our manufacturing processes are driven by precision and quality. We adhere to strict global standards,
+              utilizing advanced engineering techniques to minimize waste and maximize efficiency.
               Every batch undergoes rigorous quality control testing.
             </p>
 
