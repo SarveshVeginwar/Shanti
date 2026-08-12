@@ -1110,34 +1110,40 @@ const HomePage = () => {
           <div className="grid md:grid-cols-2 lg:grid-cols-3 gap-8">
             <Card className="card-premium hover-lift">
               <CardContent className="p-6">
-                <div className="text-sm text-primary font-medium mb-3">December 2024</div>
-                <h3 className="text-xl font-semibold text-foreground mb-3">New Sustainable Agriculture Initiative Launched</h3>
-                <p className="text-muted-foreground mb-4">Introducing our latest organic farming program that aims to help 10,000 farmers transition to sustainable practices by 2025.</p>
-                <Button variant="ghost" className="text-primary p-0 h-auto font-medium">
-                  Read More <ArrowRight className="ml-1 h-4 w-4" />
-                </Button>
+                <div className="text-sm text-primary font-medium mb-3">August 2025</div>
+                <h3 className="text-xl font-semibold text-foreground mb-3">₹1,00,000 Cr. JSW Steel Plant Near Awadh Nagari</h3>
+                <p className="text-muted-foreground mb-4">JSW Steel's massive ₹1,00,000 Cr. steel plant in Chamorshi (47 km from Awadh Nagari) and Laxmi Mittal Group's ₹40,000 Cr. project at Pombhurna are set to transform Chandrapur's economy—boosting property values significantly.</p>
+                <Link to="/real-estate/projects/awadh-nagari">
+                  <Button variant="ghost" className="text-primary p-0 h-auto font-medium">
+                    Explore Awadh Nagari <ArrowRight className="ml-1 h-4 w-4" />
+                  </Button>
+                </Link>
               </CardContent>
             </Card>
 
             <Card className="card-premium hover-lift">
               <CardContent className="p-6">
-                <div className="text-sm text-primary font-medium mb-3">November 2024</div>
-                <h3 className="text-xl font-semibold text-foreground mb-3">Awadh Nagari Township Project Announced</h3>
-                <p className="text-muted-foreground mb-4">Exciting new residential township project in Gondpipary featuring modern amenities and traditional architectural elements.</p>
-                <Button variant="ghost" className="text-primary p-0 h-auto font-medium">
-                  Read More <ArrowRight className="ml-1 h-4 w-4" />
-                </Button>
+                <div className="text-sm text-primary font-medium mb-3">July 2025</div>
+                <h3 className="text-xl font-semibold text-foreground mb-3">Awadh Nagari Township — 177 Plots Across 11 Acres</h3>
+                <p className="text-muted-foreground mb-4">Shanti Lifespaces launches Awadh Nagari, a RERA-approved premium township in Gondpipary featuring grand temple, green gym, gated security, and plots starting at just ₹21,000 booking amount with 9-month interest-free EMI.</p>
+                <Link to="/real-estate/projects/awadh-nagari">
+                  <Button variant="ghost" className="text-primary p-0 h-auto font-medium">
+                    View Project <ArrowRight className="ml-1 h-4 w-4" />
+                  </Button>
+                </Link>
               </CardContent>
             </Card>
 
             <Card className="card-premium hover-lift">
               <CardContent className="p-6">
-                <div className="text-sm text-primary font-medium mb-3">October 2024</div>
-                <h3 className="text-xl font-semibold text-foreground mb-3">Healthcare Innovation Center Opens</h3>
-                <p className="text-muted-foreground mb-4">Our new research facility focuses on developing next-generation pharmaceutical solutions for emerging health challenges.</p>
-                <Button variant="ghost" className="text-primary p-0 h-auto font-medium">
-                  Read More <ArrowRight className="ml-1 h-4 w-4" />
-                </Button>
+                <div className="text-sm text-primary font-medium mb-3">June 2025</div>
+                <h3 className="text-xl font-semibold text-foreground mb-3">Shanti Agro Industries Expands Operations</h3>
+                <p className="text-muted-foreground mb-4">FSSAI-certified (11520060000013) Shanti Agro Industries, led by Proprietor Pratik Weginwar, continues to expand wheat processing and organic fertilizer operations from Chandrapur, serving farmers across Maharashtra.</p>
+                <Link to="/industries/shanti-agro">
+                  <Button variant="ghost" className="text-primary p-0 h-auto font-medium">
+                    Learn More <ArrowRight className="ml-1 h-4 w-4" />
+                  </Button>
+                </Link>
               </CardContent>
             </Card>
           </div>

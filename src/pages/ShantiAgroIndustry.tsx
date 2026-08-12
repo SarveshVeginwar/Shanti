@@ -1,6 +1,6 @@
 
 import { useNavigate } from "react-router-dom";
-import { ArrowLeft, Star, Wheat, Leaf, Factory, Settings, Eye, Target, Calendar, Phone, Mail, MapPin, ChevronRight, CheckCircle2, X } from "lucide-react";
+import { ArrowLeft, Star, Wheat, Leaf, Factory, Settings, Eye, Target, Calendar, Phone, Mail, MapPin, ChevronRight, CheckCircle2, X, MessageCircle, FileText } from "lucide-react";
 import { Button } from "@/components/ui/button";
 import { Carousel, CarouselContent, CarouselItem, CarouselNext, CarouselPrevious } from "@/components/ui/carousel";
 import { Card, CardContent } from "@/components/ui/card";
@@ -330,13 +330,48 @@ const ShantiAgroIndustry = () => {
                             </p>
                         </motion.div>
 
+                        {/* Business Registration Box */}
+                        <motion.div
+                            initial={{ opacity: 0, scale: 0.9 }}
+                            whileInView={{ opacity: 1, scale: 1 }}
+                            viewport={{ once: true }}
+                            transition={{ delay: 0.15 }}
+                            className="md:col-span-5 bg-gradient-to-br from-amber-50 to-orange-50 rounded-3xl p-10 border border-amber-100 hover:shadow-xl transition-shadow duration-300 relative overflow-hidden"
+                        >
+                            <div className="absolute top-0 right-0 p-6 opacity-5">
+                                <FileText className="w-40 h-40 text-amber-900" />
+                            </div>
+                            <div className="relative z-10">
+                                <div className="flex items-center gap-4 mb-8">
+                                    <div className="p-3 bg-white rounded-xl shadow-sm">
+                                        <FileText className="w-8 h-8 text-amber-600" />
+                                    </div>
+                                    <h3 className="text-2xl font-bold text-slate-900">Business Registration</h3>
+                                </div>
+                                <div className="space-y-4">
+                                    <div className="flex items-center justify-between py-3 border-b border-amber-200/50">
+                                        <span className="text-sm font-semibold text-slate-500 uppercase tracking-wider">GST No.</span>
+                                        <span className="text-slate-800 font-mono font-bold">27ABOPW4994N1ZB</span>
+                                    </div>
+                                    <div className="flex items-center justify-between py-3 border-b border-amber-200/50">
+                                        <span className="text-sm font-semibold text-slate-500 uppercase tracking-wider">FSSAI</span>
+                                        <span className="text-slate-800 font-mono font-bold">11520060000013</span>
+                                    </div>
+                                    <div className="flex items-center justify-between py-3">
+                                        <span className="text-sm font-semibold text-slate-500 uppercase tracking-wider">Proprietor</span>
+                                        <span className="text-slate-800 font-bold">Pratik Weginwar</span>
+                                    </div>
+                                </div>
+                            </div>
+                        </motion.div>
+
                         {/* Mission Box */}
                         <motion.div
                             initial={{ opacity: 0, scale: 0.9 }}
                             whileInView={{ opacity: 1, scale: 1 }}
                             viewport={{ once: true }}
                             transition={{ delay: 0.2 }}
-                            className="md:col-span-12 bg-slate-900 rounded-3xl p-10 md:p-14 text-white hover:shadow-2xl transition-shadow duration-300 relative overflow-hidden"
+                            className="md:col-span-7 bg-slate-900 rounded-3xl p-10 md:p-14 text-white hover:shadow-2xl transition-shadow duration-300 relative overflow-hidden"
                         >
                             <div className="absolute inset-0 bg-gradient-to-r from-emerald-900/20 to-slate-900/50" />
                             <div className="relative z-10 flex flex-col md:flex-row gap-10 items-start md:items-center">
@@ -347,7 +382,7 @@ const ShantiAgroIndustry = () => {
                                 </div>
                                 <div>
                                     <h3 className="text-3xl font-bold mb-4">Our Mission</h3>
-                                    <p className="text-xl md:text-2xl text-slate-300 font-light leading-relaxed">
+                                    <p className="text-lg md:text-xl text-slate-300 font-light leading-relaxed">
                                         Delivering superior quality through continuous innovation, ethical practices, and a steadfast commitment to environmental stewardship.
                                     </p>
                                     <div className="flex flex-wrap gap-4 mt-8">
@@ -416,31 +451,41 @@ const ShantiAgroIndustry = () => {
                                 Contact Us
                             </h3>
                             <div className="space-y-8">
-                                <a href="#" className="flex items-start gap-6 group">
+                                <a href="https://maps.google.com/?q=Near+Akola+Urban+Bank+Ganjward+Chandrapur" target="_blank" rel="noopener noreferrer" className="flex items-start gap-6 group">
                                     <div className="p-4 bg-slate-900 rounded-2xl group-hover:bg-emerald-500/20 transition-colors border border-slate-800 group-hover:border-emerald-500/30">
                                         <MapPin className="w-8 h-8 text-emerald-500" />
                                     </div>
                                     <div>
                                         <h4 className="text-lg font-bold text-slate-200 mb-1 group-hover:text-emerald-400 transition-colors">Visit Us</h4>
-                                        <p className="text-slate-400 leading-relaxed">Plot No. 123, GIDC Industrial Estate,<br />Navsari, Gujarat, India - 396445</p>
+                                        <p className="text-slate-400 leading-relaxed">Near Akola Urban Bank, Ganjward,<br />Chandrapur, Maharashtra, India 🇮🇳</p>
                                     </div>
                                 </a>
-                                <a href="tel:+919876543210" className="flex items-start gap-6 group">
+                                <a href="tel:+918484935922" className="flex items-start gap-6 group">
                                     <div className="p-4 bg-slate-900 rounded-2xl group-hover:bg-emerald-500/20 transition-colors border border-slate-800 group-hover:border-emerald-500/30">
                                         <Phone className="w-8 h-8 text-emerald-500" />
                                     </div>
                                     <div>
                                         <h4 className="text-lg font-bold text-slate-200 mb-1 group-hover:text-emerald-400 transition-colors">Call Us</h4>
-                                        <p className="text-slate-400 font-mono text-lg">+91 98765 43210</p>
+                                        <p className="text-slate-400 font-mono text-lg">+91 84849 35922 (O)</p>
+                                        <p className="text-slate-500 font-mono text-sm mt-1">07172-355644 (O)</p>
                                     </div>
                                 </a>
-                                <a href="mailto:info@shantiagro.com" className="flex items-start gap-6 group">
+                                <a href="mailto:shantigroup.w@gmail.com" className="flex items-start gap-6 group">
                                     <div className="p-4 bg-slate-900 rounded-2xl group-hover:bg-emerald-500/20 transition-colors border border-slate-800 group-hover:border-emerald-500/30">
                                         <Mail className="w-8 h-8 text-emerald-500" />
                                     </div>
                                     <div>
                                         <h4 className="text-lg font-bold text-slate-200 mb-1 group-hover:text-emerald-400 transition-colors">Email Us</h4>
-                                        <p className="text-slate-400">info@shantiagro.com</p>
+                                        <p className="text-slate-400">shantigroup.w@gmail.com</p>
+                                    </div>
+                                </a>
+                                <a href="https://wa.me/918484935922?text=Hello%20Shanti%20Agro%20Industries%2C%20I%20would%20like%20to%20know%20more%20about%20your%20products." target="_blank" rel="noopener noreferrer" className="flex items-start gap-6 group">
+                                    <div className="p-4 bg-slate-900 rounded-2xl group-hover:bg-green-500/20 transition-colors border border-slate-800 group-hover:border-green-500/30">
+                                        <MessageCircle className="w-8 h-8 text-green-500" />
+                                    </div>
+                                    <div>
+                                        <h4 className="text-lg font-bold text-slate-200 mb-1 group-hover:text-green-400 transition-colors">WhatsApp</h4>
+                                        <p className="text-slate-400">Chat with us instantly</p>
                                     </div>
                                 </a>
                             </div>
